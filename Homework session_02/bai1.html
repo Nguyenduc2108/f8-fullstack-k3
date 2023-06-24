@@ -3,17 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>Document</title>
+
+    <style>
+      .main {
+        margin: 0 auto;
+        padding: 4px 0 12px 8px;
+        background-color: #e9e9e9;
+        width: 50%;
+      }
+      th {
+        text-align-last: left;
+      }
+      input {
+        width: 90.6%;
+        padding: 8px;
+        border: solid #ccc;
+        outline: none;
+        margin-bottom: 8px;
+      }
+      td div {
+        position: relative;
+      }
+      .icon_down {
+        position: absolute;
+        top: 45%;
+        right: 28px;
+        color: #767575;
+        transform: translateY(-50%);
+      }
+      .btn {
+        height: 40px;
+        margin-left: 3px;
+        margin-top: 8px;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        background-color: #38675b;
+      }
+    </style>
   </head>
   <body>
-    <!-- begin form -->
-    <h1>Try a free sample</h1>
-    <p>
-      Sign up to get a coupon you can redeem at your nearest Dancing <br />
-      Goat cafe for a sample of the Colombia Carlos Imbachi coffee. We'll <br />
-      also make sure you don't miss out on news introducing the new <br />
-      coffees that we add to our store regularly.
-    </p>
-    <!-- end form -->
+    <div class="main">
+      <!-- begin heading -->
+      <div style="margin-left: 4px">
+        <h1>Try a free sample</h1>
+        <p>
+          Sign up to get a coupon you can redeem at your nearest Dancing <br />
+          Goat cafe for a sample of the Colombia Carlos Imbachi coffee. We'll
+          <br />
+          also make sure you don't miss out on news introducing the new <br />
+          coffees that we add to our store regularly.
+        </p>
+      </div>
+      <!-- end heading -->
+
+      <!-- begin table -->
+      <table width="100%">
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="John" /></td>
+          <td><input type="text" placeholder="Smith" /></td>
+        </tr>
+        <tr>
+          <th>Email address</th>
+          <th>Address</th>
+        </tr>
+        <tr>
+          <td><input type="email" placeholder="john@example.com" /></td>
+          <td><input type="text" placeholder="Silk St" /></td>
+        </tr>
+        <tr>
+          <th>City</th>
+          <th>State<span style="color: #ccc">(optional)</span></th>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="London" /></td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <th>ZIP code</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td><input type="text" placeholder="EC2Y 8DS" /></td>
+          <td>
+            <div>
+              <input type="text" placeholder="United Kingdom" />
+              <i class="icon_down fas fa-angle-down"></i>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- end talbe -->
+
+      <!-- begin .btn -->
+      <div>
+        <button class="btn">SEND ME FREE COFFEE</button>
+      </div>
+      <!-- end .btn -->
+    </div>
   </body>
 </html>
