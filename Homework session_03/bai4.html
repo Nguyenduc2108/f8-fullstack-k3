@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        padding: 24px 48px;
+      }
+      .nav {
+        display: inline-block;
+      }
+      .list {
+        list-style-type: none;
+        display: flex;
+        padding-left: 0;
+        border: 2px solid rgb(225, 200, 13);
+      }
+      .item {
+        padding: 0px 8px 0px 0px;
+      }
+      .item a {
+        text-decoration: none;
+        color: rgb(225, 200, 13);
+        padding: 8px 16px;
+        display: inline-block;
+      }
+      .item:nth-child(1) a {
+        background-color: rgb(225, 200, 13);
+        color: #fff;
+      }
+      .content {
+        margin-top: 24px;
+        width: 100%;
+        display: flex;
+      }
+      .content-info {
+        width: 40%;
+        padding: 24px 0 108px 32px;
+        background-color: #f5f5f5;
+      }
+      .content-info h2 {
+        color: #4e4d4d;
+      }
+      .address {
+        color: #878484;
+      }
+      .info-link {
+        text-decoration: none;
+        color: #878484;
+      }
+      .info-email {
+        color: rgb(225, 200, 13);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Begin .nav -->
+      <nav class="nav">
+        <ul class="list">
+          <li class="item active"><a href="#">United Arad Emirates</a></li>
+          <li class="item"><a href="#">London</a></li>
+          <li class="item"><a href="#">Singapore</a></li>
+          <li class="item"><a href="#">Hong Kong</a></li>
+        </ul>
+      </nav>
+      <!-- End .nav -->
+
+      <!-- Begin .content -->
+      <main class="content">
+        <!-- Begin .content-info -->
+        <div class="content-info">
+          <h2>ADS SECURITIES L.L.C.</h2>
+          <div class="address">
+            <p>
+              8th floor. CI Tower <br />
+              Corniche Road PO Box 93894 <br />
+              Abu Dhabi Untied Arab Emirates
+            </p>
+          </div>
+          <div>
+            <p>
+              <a class="info-link" href="tel:+971 2657 2300"
+                >Tel:+971 2657 2300</a
+              >
+            </p>
+            <p><a class="info-link" href="#">Fax:+971 2657 2323</a></p>
+            <p style="color: #878484">
+              Email:
+              <a class="info-email" href="mailto:cs@adssecurities.com"
+                >cs@adssecurities.com</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- End .content-info -->
+
+        <!-- Begin .content-map -->
+        <div class="content-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d472322.0468088179!2d113.79801657354551!3d22.353025057884597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403e2eda332980f%3A0xf08ab3badbeac97c!2zSOG7k25nIEvDtG5n!5e0!3m2!1svi!2s!4v1687709341987!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <!-- End .content-map -->
+      </main>
+      <!-- End .content -->
+    </div>
+  </body>
+</html>

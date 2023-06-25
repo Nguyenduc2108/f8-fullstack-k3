@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid #ddd;
+      }
+      th {
+        text-align: center;
+      }
+      tr {
+        height: 40px;
+      }
+      input {
+        padding: 8px;
+        margin-top: 8px;
+        outline: none;
+        border: 1px solid #000;
+      }
+      .submit {
+        color: #fff;
+        background-color: red;
+        border: 1px solid red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- begin table -->
+    <table border="1" cellspacing="0=">
+      <tr>
+        <th colspan="2">Thông tin sản phẩm</th>
+        <th rowspan="2">SL</th>
+        <th rowspan="2">
+          Đơn giá
+          <div>(đồng)</div>
+        </th>
+        <th rowspan="2">
+          Thành tiền
+          <div>(đồng)</div>
+        </th>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; text-align-last: left; padding: 8px">
+          Hình ảnh
+        </td>
+        <td style="font-weight: bold; text-align-last: left; padding: 8px">
+          Tên sản phẩm
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 10%">
+          <img
+            style="width: 60%; padding: 8px; margin-left: 15px"
+            src="../Homework session_02/img/H.jpg"
+            alt="Chữ H"
+          />
+        </td>
+        <td>
+          <p style="padding-left: 8px">
+            Túi golf dựng gậy cao cấp nữ Honma CB213 3sao
+          </p>
+          <p style="padding-left: 8px">Mã: HTML12230</p>
+        </td>
+        <td style="text-align: center">1</td>
+        <td style="text-align: right; padding-right: 8px">14,070,000</td>
+        <td style="text-align: right; padding-right: 8px">14,070,000</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 8px; font-weight: bold" colspan="2">Cộng</td>
+        <td style="text-align: center">1</td>
+        <td></td>
+        <td style="text-align: right; font-weight: bold; padding-right: 8px">
+          14,070,000
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 8px; font-weight: bold" colspan="4">
+          TỔNG CỘNG
+        </td>
+        <td style="text-align: right; font-weight: bold; padding-right: 8px">
+          14,070,000
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 8px" rowspan="2" colspan="4">
+          Xin vui lòng nhập mã giảm giá(nếu có)
+          <div>
+            <input type="text" placeholder="Mã" />
+            <input type="submit" class="submit" value="ÁP DỤNG" />
+          </div>
+        </td>
+        <td rowspan="2" style="text-align: right; padding-right: 8px">0</td>
+      </tr>
+      <tr></tr>
+      <tr>
+        <td style="padding-left: 8px" colspan="4">TIỀN HÀNG SAU GIẢM GIÁ</td>
+        <td style="text-align: right; padding-right: 8px">14,070,000</td>
+      </tr>
+      <tr>
+        <td style="padding-left: 8px; font-weight: bold" colspan="4">
+          SỐ TIỀN CẦN THANH TOÁN
+        </td>
+        <td style="text-align: right; font-weight: bold; padding-right: 8px">
+          14,070,000
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-left: 8px" colspan="4">
+          Phí ship Túi golf đựng gậy cao cấp nữ Honma CB2133 3sao
+        </td>
+        <td style="text-align: right; padding-right: 8px">Miễn phí ship</td>
+      </tr>
+    </table>
+    <!-- END table -->
+  </body>
+</html>

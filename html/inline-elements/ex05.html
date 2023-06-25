@@ -4,24 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .table thead {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
-    <table border="1" width="100%">
+    <table border="1" width="100%" cellspacing="0" cellpadding="10">
       <tr>
         <th width="5%">STT</th>
         <th>Ten</th>
         <th>Thu Nhap</th>
       </tr>
       <tr>
-        <td>1</td>
+        <td rowspan="2">1</td>
         <td>Hoang An</td>
         <td>5.000.000</td>
       </tr>
       <tr>
-        <td>2</td>
+        <!-- <td>2</td> -->
         <td>Son Dang</td>
-        <td>50.000.000</td>
+        <td>5.000.000</td>
       </tr>
+      <tr>
+        <td>3</td>
+        <td>Duong Nguyen</td>
+        <td>5.000.000</td>
+      </tr>
+      <tr>
+        <th colspan="2">Tong</th>
+        <td>15.000.000</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th colspan="2">thong tin san pham</th>
+        <th rowspan="2">SL</th>
+        <th rowspan="2">
+          Don gia
+          <div>(dong)</div>
+        </th>
+        <th rowspan="2">
+          Thanh tien
+          <div>(dong)</div>
+        </th>
+      </tr>
+      <tr>
+        <th>Hinh anh</th>
+        <th>Ten san pham</th>
+      </tr>
+      <tr>
+        <td><img src="" alt="" /></td>
+        <td>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+            modi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+            modi!
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <table
+      border="1"
+      width="100%"
+      class="table"
+      cellspacing="0"
+      cellpadding="10"
+    >
+      <thead>
+        <tr>
+          <th colspan="2">thong tin san pham</th>
+          <th rowspan="2">sl</th>
+          <th rowspan="2">
+            don gia <br />
+            (dong)
+          </th>
+          <th rowspan="2">
+            thanh tien <br />
+            (dong)
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>hinh anh</th>
+          <th>ten san pham</th>
+        </tr>
+        <tr>
+          <td>
+            <img src="" alt="" />
+          </td>
+          <td>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+              modi!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+              ullam.
+            </p>
+          </td>
+          <td>1</td>
+          <td>14,070,000</td>
+          <td>14,070,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">Cong</th>
+          <td>1</td>
+          <td></td>
+          <td><b>14,070,000</b></td>
+        </tr>
+        <tr>
+          <th colspan="4">Tong cong</th>
+          <td><b>14,070,000</b></td>
+        </tr>
+      </tfoot>
     </table>
   </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        margin: 0 auto;
+      }
+      input,
+      select {
+        outline: none;
+        border: 1px solid #000;
+      }
+      .footer {
+        margin-top: 8px;
+        text-align: center;
+      }
+      .footer input {
+        border-radius: 2px;
+        padding: 2px 8px;
+        margin: 0 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Begin table -->
+    <table border="0">
+      <tr>
+        <td>Username:</td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" /></td>
+      </tr>
+      <tr>
+        <td>
+          City of <br />
+          Emmployment:
+        </td>
+        <td><input type="text" /></td>
+      </tr>
+      <tr>
+        <td>Web server:</td>
+        <td>
+          <select>
+            <option>Chosse a server</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Please specify <br />
+          your role:
+        </td>
+        <td>
+          <div><input type="radio" name="specify" />Admin</div>
+          <div><input type="radio" name="specify" />Engineer</div>
+          <div><input type="radio" name="specify" />Manager</div>
+          <div><input type="radio" name="specify" />Guest</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Single Sign-on <br />
+          to the following:
+        </td>
+        <td>
+          <div><input type="checkbox" name="Sign-on" />Mail</div>
+          <div><input type="checkbox" name="Sign-on" />Payroll</div>
+          <div><input type="checkbox" name="Sign-on" />Self-service</div>
+        </td>
+      </tr>
+    </table>
+    <!-- End table -->
+
+    <!-- Begin .footer -->
+    <footer class="footer">
+      <input type="submit" value="Login" />
+      <input type="reset" value="Reset" />
+    </footer>
+    <!-- End .footer -->
+  </body>
+</html>

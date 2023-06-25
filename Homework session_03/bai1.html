@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Document</title>
+    <style>
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .contact-heading {
+        position: relative;
+      }
+      h1 {
+        margin-left: 40px;
+        padding: 4px;
+        font-weight: 400;
+        display: inline-block;
+      }
+      .bar-bottom {
+        position: absolute;
+        top: 80px;
+        left: 46px;
+        height: 2px;
+        width: 70px;
+        background-color: rgb(228, 169, 9);
+      }
+      .container {
+        display: flex;
+        margin-left: 45px;
+      }
+      .contact-info {
+        margin-right: 80px;
+      }
+      .contact-right {
+        width: 68.6%;
+      }
+      h2 {
+        margin-bottom: 40px;
+      }
+      .contact-section {
+        margin-top: -16px;
+        color: #757575;
+        margin-bottom: 16px;
+      }
+      .contact-icon {
+        font-size: 28px;
+        width: 28px;
+        margin-right: 16px;
+      }
+      .contact-section a {
+        color: #757575;
+        text-decoration: none;
+      }
+      .contact-address {
+        display: flex;
+        align-items: center;
+      }
+
+      .contact-communication {
+        display: flex;
+        align-items: start;
+      }
+      input,
+      textarea {
+        padding: 8px;
+        width: 100%;
+        margin-bottom: 12px;
+        outline: none;
+        border: 1px solid #ccc;
+      }
+      textarea {
+        color: #757575;
+      }
+      button {
+        padding: 12px;
+        border: none;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+        background-color: rgb(14, 194, 194);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- begin .contact-heading -->
+    <header class="contact-heading">
+      <h1>CONTACT US</h1>
+      <div class="bar-bottom"></div>
+    </header>
+    <!-- end .contact-heading -->
+
+    <main class="container">
+      <!-- begin .contact-info -->
+      <div class="contact-info">
+        <h2>Contact Info</h2>
+        <div class="contact-section">
+          <div class="contact-address">
+            <i class="contact-icon fa-solid fa-location-dot"></i>
+            <p>
+              321 Awesome Street <br />
+              New York,NY 17022
+            </p>
+          </div>
+          <p class="contact-communication">
+            <i class="contact-icon fa-solid fa-envelope"></i>
+            <a href="mailto:Info@companyname.com">Info@companyname.com</a>
+          </p>
+          <p class="contact-communication">
+            <i class="contact-icon fa-solid fa-phone"></i>
+            <a href="tel:+1 800 123 1234">+1 800 123 1234</a>
+          </p>
+        </div>
+        <!-- end .contact-section -->
+      </div>
+      <!-- end .contact-info -->
+
+      <!-- begin .contact-right -->
+      <div class="contact-right">
+        <h2>Having Any Query! Or Book an appointment</h2>
+        <form action="">
+          <div>
+            <input type="text" placeholder="Your Name" />
+          </div>
+          <div>
+            <input type="email" placeholder="Your Email" />
+          </div>
+          <div>
+            <input type="text" placeholder="Subject" />
+          </div>
+          <div>
+            <textarea name="" id="" cols="30" rows="10">Message</textarea>
+          </div>
+          <div>
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+      <!-- end .contact-right -->
+    </main>
+  </body>
+</html>
