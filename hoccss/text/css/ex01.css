@@ -1,0 +1,35 @@
+/* .content {
+    color: #d80fac;
+} */
+
+/* .box {
+    color: rgba(211, 12, 12, 0.781);
+} */
+
+/* 
+- Ten mau 
+- rgb()
+- hsl()
+-hexa
+
+--> color picker
+
+2 gia tri ke thua trong CSS
+- inherit -> ke thua tu thanh phan cha truc tiep
+- initial -> ke thua mac dinh trinh duyet
+*/
+body {
+    color: green;
+}
+
+.content {
+    color: red;
+}
+/* 
+.content p {
+    color: inherit;
+} */
+
+.content p:hover {
+    color: initial;
+}

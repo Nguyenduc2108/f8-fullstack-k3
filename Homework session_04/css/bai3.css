@@ -83,6 +83,10 @@ input[id="Makeup"]:checked ~ .products .Makeup {
     width: 100%;
 }
 
+.item-wrapper img {
+    height: 224px;
+}
+
 .item-img + .item-img {
     position: absolute;   
     top: 0;
@@ -104,6 +108,7 @@ input[id="Makeup"]:checked ~ .products .Makeup {
     height: 220px;
     width: 100%;
     cursor: pointer;
+    width: 262px;
 }
 
 .item-cart {
@@ -128,7 +133,7 @@ input[id="Makeup"]:checked ~ .products .Makeup {
 .add_cart-btn {
     padding: 10px;
     left: 0;
-    width: 260px;
+    width: 262px;
     border: none;
     outline: none;
     background-color: blue;

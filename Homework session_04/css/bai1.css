@@ -8,8 +8,9 @@
 .box:hover input::placeholder {
     color: rgb(177, 177, 7);
 }
+
 .box:hover input {
-    border: 1px solid #ddd;
+    background-color: #ddd;
 }
 
 h1 , p {
