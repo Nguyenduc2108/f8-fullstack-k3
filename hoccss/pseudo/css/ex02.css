@@ -1,0 +1,22 @@
+/*  
+:hover
+:active
+:focus
+*/
+
+.title:hover {
+    color: red;
+}
+
+.title:active {
+    color: green;
+}
+
+.btn:focus, 
+.field-item:focus {
+    border: 1px dolod ;
+}
+
+.products h2:not(.active):not(.first) {
+    color: red;
+}

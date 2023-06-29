@@ -1,0 +1,53 @@
+.header {
+    text-align: center;
+    color: rgb(223, 131, 20);
+}
+h1 {
+    font-family: Alfa Slab One;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: BebasNeue;
+    font-size: 50px;
+}
+
+.book-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.info-item {
+    width: 50%;
+}
+
+.info-item input {
+    width: 90%;
+    height: 50px;
+    font-size: 18px;
+    padding: 10px 16px;
+    margin-bottom: 12px;
+    border: 1px solid #000;
+    font-family: BebasNeue;
+}
+.info-item input::placeholder {
+    color: rgb(223, 131, 20);
+
+}
+
+
+.info-item button {
+    font-family: Alfa Slab One;
+    width: calc(90% + 34px);
+    height: 72px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: rgb(199, 13, 13);
+    color: #fff;
+}

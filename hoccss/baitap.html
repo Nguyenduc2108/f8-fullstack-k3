@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content.red {
+        display: none;
+      }
+      .Red:checked ~ .content.red {
+        color: red;
+        display: block;
+      }
+      .Green:checked ~ .content.green {
+        color: green;
+      }
+      .Blue:checked ~ .content.blue {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="red">
+        <span>Red</span>
+      </label>
+      <label for="green">
+        <span>Green</span>
+      </label>
+      <label for="blue">
+        <span>Blue</span>
+      </label>
+    </div>
+    <input class="Red" type="radio" name="color" id="red" checked />
+    <!-- <input class="Green" type="radio" name="color" id="green" />
+    <input class="Blue" type="radio" name="color" id="blue" /> -->
+    <hr />
+    <div class="content red">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum molestiae
+      placeat maiores sapiente eligendi omnis eaque vitae sequi totam vel
+      commodi velit, culpa dolorum itaque voluptates ut architecto consectetur
+      consequuntur.
+    </div>
+    <input class="Green" type="radio" name="color" id="green" />
+
+    <div class="content green">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum molestiae
+      placeat maiores sapiente eligendi omnis eaque vitae sequi totam vel
+      commodi velit, culpa dolorum itaque voluptates ut architecto consectetur
+      consequuntur.
+    </div>
+    <input class="Blue" type="radio" name="color" id="blue" />
+
+    <div class="content blue">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum molestiae
+      placeat maiores sapiente eligendi omnis eaque vitae sequi totam vel
+      commodi velit, culpa dolorum itaque voluptates ut architecto consectetur
+      consequuntur.
+    </div>
+  </body>
+</html>

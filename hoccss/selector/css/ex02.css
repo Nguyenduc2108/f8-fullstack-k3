@@ -1,0 +1,25 @@
+/* .box h2 ~ p, 
+.box h2 ~ div p {
+    color: red;
+} */
+
+/* .box h2 ~ div p {
+    color: red;
+} */
+
+/* 
+p: dung ngang hang the h2
+p va h2 la con cua .box
+*/
+
+/* .box p + h2 {
+    color: red;
+} */
+
+/* .box h2 + h2  {
+    color: red;
+}  */
+
+.todos input:checked ~ span {
+    color: red;
+}

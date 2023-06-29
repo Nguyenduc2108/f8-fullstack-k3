@@ -1,0 +1,23 @@
+/* .products .item:first-child {
+    color: red;
+}
+
+.products .item:last-child {
+    color: rgba(43, 246, 43, 0.703);
+} */
+/* 
+.products .item:first-of-type {
+    color: red;
+}
+
+.products .item:last-of-type {
+    color: green;
+} */
+/* 
+.post h2:nth-child(2n + 2) {
+    color: red;
+} */
+
+.post h2:nth-of-type(2n + 2) {
+    color: red;
+}
