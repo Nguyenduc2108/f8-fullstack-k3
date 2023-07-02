@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all linear 0.2s;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    background-color: #f5f5f5;
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.container {
+    margin-bottom: 8px;
+}
+
+.heading {
+    display: flex;
+    padding: 10px;
+    background-color: rgb(233, 91, 8);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.heading__text {
+    margin-left: 20px;
+}
+
+.heading__icon {
+    font-size: 20px;
+    padding: 0 8px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.heading__icon.icon__minus {
+    display: none;
+}
+
+.content__info {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.content__info-heading {
+    margin: 8px 0;
+}
+
+input[id="switch__01"]:checked ~ .content__info.switch__01 {
+    max-height: 300px;
+}
+
+input[id="switch__01"]:checked ~ label .heading .heading__icon {
+    display: none;
+}
+
+input[id="switch__01"]:checked ~ label .heading .heading__icon.icon__minus {
+    display: block;
+}
+
+input[id="switch__02"]:checked ~ .content__info.switch__02 {
+    max-height: 300px;
+}
+
+input[id="switch__02"]:checked ~ label .heading .heading__icon {
+    display: none;
+}
+
+input[id="switch__02"]:checked ~ label .heading .heading__icon.icon__minus {
+    display: block;
+}
+
+input[id="switch__03"]:checked ~ .content__info.switch__03 {
+    max-height: 300px;
+}
+
+input[id="switch__03"]:checked ~ label .heading .heading__icon {
+    display: none;
+}
+
+input[id="switch__03"]:checked ~ label .heading .heading__icon.icon__minus {
+    display: block;
+}
+
+
+.item__bold {
+    font-weight: bold;
+}
+
+.content__info-text {
+    line-height: 1.5;
+}
+
+.content__info-bottom {
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+

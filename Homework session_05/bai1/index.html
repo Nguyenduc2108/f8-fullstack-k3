@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="contact">
+      <header class="header">
+        <h1 class="header__heading">Hey there</h1>
+        <p class="header__text">
+          <span class="header__primary">We'd like to hear from you.</span> Send
+          us your message or just say hy with our contact form or directly via
+          phone,we love to chat
+        </p>
+      </header>
+      <!-- end .header -->
+
+      <form action="" method="get">
+        <!-- input__1  -->
+        <div class="form__group">
+          <input type="text" placeholder="Your name" class="form__input" />
+          <p class="form__text">Enter you name</p>
+          <i class="form__icon-left fas fa-user"></i>
+          <i class="form__icon-right fas fa-star"></i>
+          <i class="form__icon-right form__close fas fa-close"></i>
+        </div>
+
+        <!-- input__2  -->
+        <div class="form__group">
+          <input
+            type="email"
+            placeholder="your@domain.com"
+            class="form__input"
+          />
+          <p class="form__text">Enter email</p>
+          <i class="form__icon-left fa-solid fa-envelope"></i>
+          <i class="form__icon-right fas fa-star"></i>
+          <i class="form__icon-right form__close fas fa-close"></i>
+        </div>
+
+        <!-- input__3  -->
+        <div class="form__group">
+          <input type="tel" placeholder="+44 00 123" class="form__input" />
+          <p class="form__text">Enter phone number</p>
+          <!-- <i class="form__icon-left fas fa-user"></i> -->
+          <i class="form__icon-left fa-solid fa-mobile-screen-button"></i>
+          <i
+            style="display: none"
+            style="display: none"
+            class="form__icon-right fas fa-star"
+          ></i>
+          <i
+            style="display: none"
+            class="form__icon-right form__close fas fa-close"
+          ></i>
+        </div>
+
+        <!-- input__4  -->
+        <div class="form__group">
+          <input type="number" placeholder="Subject" class="form__input" />
+          <p class="form__text">Enter subject</p>
+          <i class="form__icon-left fa-solid fa-folder"></i>
+          <i style="display: none" class="form__icon-right fas fa-star"></i>
+          <i
+            style="display: none"
+            class="form__icon-right form__close fas fa-close"
+          ></i>
+        </div>
+
+        <!-- input__5  -->
+        <div class="form__group">
+          <!-- <input type="text" placeholder="Message" class="form__input" /> -->
+          <textarea
+            class="form__input"
+            type="text"
+            placeholder="Message"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <p class="form__text">Enter message</p>
+          <i class="form__icon-left fa-solid fa-message"></i>
+          <i style="top: 10%" class="form__icon-right fas fa-star"></i>
+          <i
+            style="top: 10%"
+            class="form__icon-right form__close fas fa-close"
+          ></i>
+        </div>
+
+        <footer class="form__footer">
+          <div class="form__footer-inner">
+            <div class="form__footer-check">
+              <i class="fas fa-check"></i>
+            </div>
+            <p class="form__footer-text">Send me a copy of this message</p>
+          </div>
+          <button type="submit" class="form__footer-btn">SEND</button>
+        </footer>
+      </form>
+      <!-- .end form -->
+    </section>
+  </body>
+</html>
