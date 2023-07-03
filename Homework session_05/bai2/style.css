@@ -96,11 +96,12 @@ input[id="switch__03"]:checked ~ label .heading .heading__icon.icon__minus {
     font-weight: bold;
 }
 
-.content__info-text {
+ul li {
     line-height: 1.5;
 }
 
 .content__info-bottom {
+    margin-top: 4px;
     line-height: 1.5;
     margin-bottom: 12px;
 }
