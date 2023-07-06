@@ -1,0 +1,32 @@
+.box {
+    background: green;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    border: 1px solid red;
+    width: 400px;
+}
+
+/* width , height chi hoat dong voi the block */
+/* 
+.span {
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    display: block;
+} */
+
+/* 
+tim hieu ve vw va vh
+
+vw = viewport width
+
+vh = viewport height
+*/
+
+.img {
+    width: 500px;
+    height: auto;
+}

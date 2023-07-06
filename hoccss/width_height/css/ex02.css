@@ -1,0 +1,30 @@
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.image {
+    width: 400px;
+    height: 800px;
+    border: 1px solid red;
+}
+
+.image img {
+    max-width: 300px;
+    width: 500px;
+}
+
+/* 
+max-width & min-width sẽ chặn đầu và đuôi
+
+- width
+- height
+- min-width
+- max-width
+- min-height
+- max-height
+
+*/

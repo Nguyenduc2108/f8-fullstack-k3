@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;
+}
+
+/* .box {
+    border: 5px solid red;
+    padding: 30px;
+    margin: 30px;
+    width: 300px;
+
+} */
+
+.products {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.product {
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: calc(100% / 4);
+    font-size: 1rem;
+    padding: 50px;
+}

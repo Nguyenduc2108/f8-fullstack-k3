@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background: #ebf5fe;
+}
+
+.container {
+    padding: 32px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 30%;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    border: 2px solid #fff;
+}
+
+.item--red:hover {
+    border: 2px solid red;
+}
+.item--green:hover {
+    border: 2px solid green;
+}
+.item--yellow:hover  {
+    border: 2px solid rgb(170, 170, 5);
+}
+.item--blue:hover  {
+    border: 2px solid blue;
+}
+.item--blueviolet:hover  {
+    border: 2px solid blueviolet;
+}
+.item--greenyellow:hover  {
+    border: 2px solid rgb(114, 171, 29);
+}
+
+
+.item_heading {
+    display: flex;
+    align-items: center;
+}
+
+.item_icon {
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 8px;
+}
+
+.item_icon--red {
+    background-color: red;
+}
+.item_icon--green {
+    background-color: green;
+}
+.item_icon--yellow {
+    background-color: rgb(170, 170, 5);
+}
+.item_icon--blue {
+    background-color: blue;
+}
+.item_icon--blueviolet {
+    background-color: blueviolet;
+}
+.item_icon--greenyellow {
+    background-color: rgb(114, 171, 29);
+}
+
+.item_title {
+
+}
+
+.item_text {
+    margin: 12px 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.item_btn {
+ 
+}
+
+.btn {
+    font-size: 16px;
+    padding: 10px 10px 4px 10px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    color: blue;
+    background: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
