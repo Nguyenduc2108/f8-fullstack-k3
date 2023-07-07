@@ -18,7 +18,7 @@ body {
 }
 
 .item {
-    width: 30%;
+    width: 31.2%;
     margin: 12px;
     padding: 16px;
     border-radius: 10px;
@@ -58,25 +58,27 @@ body {
     border-radius: 50%;
     color: #fff;
     margin-right: 8px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .item_icon--red {
-    background-color: red;
+    background-image: linear-gradient(to right , rgb(236, 11, 11) , rgb(244, 159, 159));
 }
 .item_icon--green {
-    background-color: green;
+    background-image: linear-gradient(to right , green , rgb(113, 231, 113));
 }
 .item_icon--yellow {
-    background-color: rgb(170, 170, 5);
+    background-image: linear-gradient(to right , rgb(167, 167, 16), rgb(242, 242, 139));
 }
 .item_icon--blue {
-    background-color: blue;
+    background-image: linear-gradient(to right , blue , rgb(174, 174, 244));
 }
 .item_icon--blueviolet {
     background-color: blueviolet;
+    background-image: linear-gradient(to right , blueviolet, rgb(203, 165, 238));
 }
 .item_icon--greenyellow {
-    background-color: rgb(114, 171, 29);
+    background-image: linear-gradient(to right , rgb(121, 198, 6), rgb(192, 240, 122));
 }
 
 .item_title {

@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 500px;
+    margin: 30px auto;
+    border: 1px solid red;
+    padding: 20px;
+}
+
+.box::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.box_img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 10px 10px 0;
+    float: left;
+    -webkit-shape-outside: circle();
+    shape-outside: circle();
+}

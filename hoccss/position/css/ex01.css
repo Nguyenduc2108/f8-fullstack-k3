@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 2000px;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    margin: 30px auto;
+    position: relative;
+}
+
+.item {
+    background: green;
+    color: #fff;
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+.item:nth-child(2) {
+    /* position: relative;
+    top: 30px;
+    left: 50px;    
+    z-index: 1; */
+    position: absolute;
+    /* top: 20px;
+    left: 0; */
+     bottom: 20px;
+    right: 50px;
+    /* width: auto;  */
+    /* height: 50px; */
+}
+
+.item:nth-child(3) {
+    /* position: relative;  */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+/* 
+    Thuộc tính position
+    + relative: vị trí tương đối
+    + absolute: vị trí tuyệt đói
+    + fixed : vị trí cố định
+    + static: Giá trị mặc định, không có position
+
+    Các thuộc tính liên quan khi có position ( trừ static)
+    + left 
+    + top 
+    + right 
+    + bottom 
+    + z-index 
+
+*/

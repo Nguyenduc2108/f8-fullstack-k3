@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 
+Thuộc tính display = Thay đổi thuộc tính hiển thị của 1 element
+- none : ẩn
+- block : chuyển thành dạng block
+- inline : chuyển thành dạng inline
+- inline-block : chuyển thành dạng block, tuy nhiên vẫn nằm trên cùng 1 hàng
+
+
+Thuộc tính display có rất nhiều các giá trị phức tạp
+- list-item
+- flex
+- grid
+- table
+
+*/
+
+.box {
+    border: 1px solid red;
+    padding: 5px 15px;
+    /* visibility: hidden; */
+    display: inline-block;
+}

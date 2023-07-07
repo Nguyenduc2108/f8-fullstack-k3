@@ -42,7 +42,7 @@ body {
 }
 
 .intro_capital {
-    padding: 2px 8px;
+    padding: 4px;
     color: #ff574d;
     background-color: #fff;
     border-radius: 2px;
@@ -57,6 +57,10 @@ body {
 .intro_btn , 
 .intro_icons {
     text-align: center;
+}
+
+.intro_icon  {
+    width: 20px;
 }
 
 .btn {
@@ -112,7 +116,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 7%;
+    width: 12%;
     height: 2px;
     border-radius: 99px;
     background-color: #ff574d;
@@ -215,6 +219,5 @@ body {
 }
 
 #arrow_right:checked ~ .form_login {
-    width: 0%;
-    opacity: 0;
+    display: none;
 }
