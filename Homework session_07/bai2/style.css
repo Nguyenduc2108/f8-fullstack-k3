@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Black.ttf');
+    font-weight: 900;
+}
+
+html {
+    font-family: 'Asap' , sans-serif;
+}
+
+.banner {
+    background: url('./img/6cb93a00adf211e9b1f4bf326c0fcf18.jpg')no-repeat center / cover;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+}
+
+.banner_img {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    border-radius: 4px 4px 0 0;
+    bottom: 0;
+    left: 5%;
+    display: block;
+}
+
+.banner_info {
+    position: absolute;
+    bottom: 14%;
+    left: 26%;
+    color: #fff;
+}
+
+.banner_heading {
+    margin-bottom: 20px;
+}
+
+.banner_founded-year {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.banner_number {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+}   
+
+.banner_invested-project {
+    color: rgba(255, 255, 255, 0.7);
+}
+/* END BANNER */
+
+/* BEGIN NAV */
+.nav {
+    margin: 20px;
+}
+
+.list {
+    list-style: none;
+    text-align: right;
+}
+
+.item {
+    display: inline-block;
+    padding: 0 8px;
+}
+
+
+.link {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    padding: 12px 8px;
+    position: relative;
+}
+
+
+.color_red {
+    color: red;
+}
+
+.bar::after {
+    content: "";
+    position: absolute;
+    left: 6%;
+    bottom: 0;
+    width: 90%;
+    height: 4px;
+    border-radius: 99px;
+    background: red;
+}
+

@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Asap';
+    src: url('./fonts/Asap_Condensed-Black.ttf');
+    font-weight: 900;
+}
+
+html {
+    font-family: 'Asap' , sans-serif;
+}
+
+.main {
+    width: 1124px;
+    margin: 24px auto 0;
+}
+
+.wrapper {
+    padding: 10px;
+}
+
+.heading {
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 0 10px;
+    font-weight: 600;
+    position: relative;
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    top: 46%;
+    width: 69.6%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.nav {
+    list-style: none;
+}
+
+.item {
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    padding: 2px 16px;
+    background-color: #eee;
+    border-radius: 99px;
+}
+
+.item:nth-of-type(1) {
+    background-color: rgb(181, 110, 17);
+}
+
+.link {
+    font-size: 10px;
+    font-style: italic;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    padding: 6px;
+    display: block;
+}
+
+.color_white {
+    color: #fff;
+}
+
+.link b {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.images {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image_item {
+    width: 31.5%;
+    color: #fff;
+    margin: 8px 10px;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    border-radius: 4px;
+    height: 180px;
+}
+
+.image_item .title {
+    font-size: 18px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+.image_item .text {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    font-size: 15px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+.image_item .subtext {
+    font-size: 12px;
+    color: #eee;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
