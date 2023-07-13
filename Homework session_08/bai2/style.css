@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Nunito', sans-serif ;
+    src: url('./font/Nunito-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Nunito', sans-serif ;
+    src: url('./font/Nunito-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Nunito', sans-serif ;
+    src: url('./font/Nunito-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Nunito', sans-serif ;
+    src: url('./font/Nunito-SemiBold.ttf');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Nunito', sans-serif ;
+    src: url('./font/Nunito-Bold.ttf');
+    font-weight: 700;
+}
+
+html {
+    font-family: 'Nunito', sans-serif ;
+}
+
+body {
+    background-color: #eee;
+}
+.wrapper {
+    position: relative;
+}
+
+.nav_cart {
+    font-size: 50px;
+    text-align: right;
+    padding: 30px 60px;
+}
+
+.nav_cart_icon {
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
+
+#shopping_cart:checked ~ .overlay {
+    display: none;
+    opacity: 0;
+}
+
+#shopping_cart:checked ~ .cart {
+    display: none;
+}
+
+.cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    max-width: 100%;
+    max-height: 600px;
+    background: #fff;
+}
+
+.cart_header {
+    background-color: #f5f5f5;
+    position: relative;
+    padding: 16px 30px;
+}
+
+.cart_title {
+    font-size: 20px;
+}
+
+.cart_quantity {
+    font-size: 12px;
+    height: 10px;
+    padding: 1px 5px; 
+    background-color: blue;
+    color: #fff;
+    line-height: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.cart_header-icon {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    color: #fff;
+    background-color: orange;
+    padding: 4px 6px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.cart_body {
+    background-color: #fff;
+    padding: 10px 0 0 0;
+    overflow-y: auto;
+    max-height: 240px;
+}
+
+.cart_group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 0 20px 0;
+    margin-top: 20px;
+    border-bottom: 1px solid red;
+}
+
+.cart_group:last-child {
+    border: none;
+}
+
+.cart_img {
+    width: 80px;
+    height: 80px;
+    margin: 0 20px;
+    object-fit: cover;
+}
+
+.cart_group-close {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 20px;
+    color: #757575;
+    cursor: pointer;
+    padding: 6px 8px;
+    opacity: 0.8;
+}
+
+.cart_group-close:hover {
+    color: #757575;
+    opacity: 1;
+}
+
+.cart_name {
+    color: #595959;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.cart_below-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #757575;
+    width: 80px;
+    height: 20px;
+    border: 1px solid #757575;
+    padding: 12px 10px;
+    border-radius: 99px;
+}
+
+.cart_amount-icon {
+    cursor: pointer;
+}
+
+.cart_price {
+    font-weight: 600;
+    margin-left: 59px;
+}
+
+
+/* begin .cart_footer */
+.cart_footer {
+    padding: 10px 30px 10px 30px ;
+}
+
+.cart_footer-totalmoney {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart_footer-subtotal {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cart_footer-price {
+    color: red;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cart_footer-remind {
+    color: #757575;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif ;
+
+}
+
+.btn_view-cart {
+    background-color: #fff;
+    border: 1px solid #757575;
+    color: #757575;
+}
+
+.btn_addto-cart {
+    background-color: blue;
+    color: #fff;
+}
+
+.shipping_group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shipping_group-img {
+    width: 15%;
+    padding: 10px 0;
+    border: 1px solid red;
+    display: block;
+    border-radius: 50%;
+}
+
+.shipping_group-text {
+    font-size: 17px;
+    font-weight: 500;
+}
