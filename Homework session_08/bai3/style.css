@@ -8,25 +8,17 @@ html {
     font-family: 'Roboto', sans-serif ;
 }
 
-.main {
-}
-
-.header {
-}
-
 .header_title {
     font-size: 38px;
     text-align: center;
     margin: 10px auto;
+    text-transform: capitalize;
 }
 
 .header_text {
     text-align: center;
     font-size: 12px;
     margin-bottom: 20px;
-}
-
-.container {
 }
 
 .list {
@@ -37,7 +29,7 @@ html {
 
 .item {
     width: 31%;
-    margin: 12px 12px;
+    margin: 18px 12px;
     display: flex;
     flex-direction: column;
 }

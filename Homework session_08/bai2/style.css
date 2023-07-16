@@ -80,7 +80,7 @@ body {
 .cart_header {
     background-color: #f5f5f5;
     position: relative;
-    padding: 16px 30px;
+    padding: 16px 20px;
 }
 
 .cart_title {
@@ -101,7 +101,7 @@ body {
 .cart_header-icon {
     position: absolute;
     top: 16px;
-    right: 12px;
+    right: 20px;
     color: #fff;
     background-color: orange;
     padding: 4px 6px;
@@ -169,11 +169,18 @@ body {
     justify-content: space-between;
     font-size: 12px;
     color: #757575;
-    width: 80px;
-    height: 20px;
+    width: 90px;
+    height: 28px;
     border: 1px solid #757575;
     padding: 12px 10px;
     border-radius: 99px;
+}
+
+.cart_amount button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fff;
 }
 
 .cart_amount-icon {
@@ -188,7 +195,7 @@ body {
 
 /* begin .cart_footer */
 .cart_footer {
-    padding: 10px 30px 10px 30px ;
+    padding: 10px 20px 10px 20px ;
 }
 
 .cart_footer-totalmoney {
@@ -199,7 +206,7 @@ body {
 
 .cart_footer-subtotal {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .cart_footer-price {
@@ -256,5 +263,5 @@ body {
 
 .shipping_group-text {
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
 }

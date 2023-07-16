@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+.main {
+    width: 1200px;
+    max-width: 100%;
+    margin: 30px auto;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 24px 64px;
+}
+
+.item {
+    width: 30%;
+    margin: 12px 12px;
+    height: 220px;
+    padding: 40px 20px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+.item:hover {
+    background: rgba(214, 132, 1, 0.6);
+}
+
+.item_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: none;
+}
+
+.item:hover .item_img {
+    display: block;
+}
+
+.item_icon {
+    font-size: 32px;
+    display: block;
+    color: rgb(214, 132, 1);
+    margin: -10px 0 30px 10px;
+    scale: 1;
+    transition: display 0.3s ease;
+}
+
+.item:hover .item_icon {
+    display: none;
+}
+
+.item_info {
+    margin-top: -30px;
+    padding: 12px;
+    height: 200px;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid rgba(253, 251, 251, 0.2);
+    z-index: 1; 
+    position: relative;
+
+}
+
+.item_intro {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    position: absolute;
+    transition: top 0.3s ease;
+    top: 20px;
+}
+.item:hover .item_intro  {
+    color: #fff;
+    top: 10px;
+}
+
+.item_text {
+    font-size: 15px;
+    color: #757575;
+    margin-bottom: 30px;
+    position: absolute;
+    transition: top 0.3s ease;
+    top: 80px;
+}
+
+.item:hover .item_text {
+    color: #fff;
+    top: 70px;
+}
+
+.item_more {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    text-decoration: none;
+    position: absolute;
+    transition: top 0.3s ease;
+    top: 160px;
+}
+
+.item:hover .item_more {
+    display: flex;
+    opacity: 1;
+    top: 140px;
+}
+
+.item_more-text {
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.item_more-icon {
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 50%;
+    background-color: rgba(214, 132, 1, 0.6);
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all 0.2s linear;
+}
+
+.item_more-icon:hover {
+    background-color: #fff;
+    color: #000;
+}

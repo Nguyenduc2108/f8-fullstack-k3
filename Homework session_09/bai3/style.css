@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+.main {
+    width: 800px;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.text {
+    text-align: center;
+    color: #757575;
+    margin-bottom: 24px;
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input_group {
+    width: 47%;
+    margin: 12px;
+    position: relative;
+}
+
+.from_input , select {
+    width: 100%;
+    padding: 14px;  
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid rgb(162, 162, 236);
+}
+
+.from_input:focus {
+    border: 1px solid rgb(77, 77, 146);
+}
+
+.input_group span {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 14px;
+    color: #757575;
+    transform: translateY(-50%);
+    transition: top 0.3s ease;
+}
+
+.input_group select {
+    color: #757575;
+}
+
+.input_group select option {
+    color: #000;
+}
+
+.from_input:focus + span {
+    top: 10px;
+    left: 14px;
+    font-size: 12px;
+}
+
+.input_group textarea {
+    width: 100%;  
+    padding: 15px 14px;  
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #ccc;  
+    transition: top 0.3s ease;
+}
+.input_group textarea + span {
+    top: 10%;
+}
+
+.input_group textarea:focus + span {
+    top: 10px;
+    left: 14px;
+    font-size: 12px;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.form_btn {
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    border-radius: 99px;
+    color: #fff;
+    background: rgb(59, 59, 235);
+    cursor: pointer;
+    font-weight: 600;
+}

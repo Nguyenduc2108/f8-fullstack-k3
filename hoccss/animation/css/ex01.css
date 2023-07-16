@@ -1,0 +1,66 @@
+/* 
+Animation 
+1. @keyframes => Định nghĩa hiệu ứng theo kịch bản
+2. Thuộc tính animation => Gọi keyframes
+- animation-name: tenkeyframes
+- animation-duration: time ( s , ms ) ;
+- animation-timing-function: ;
+- animation-iteration-count:  | infinite;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    margin: 30px auto;
+    position: relative;
+}
+.box span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: green;
+    position: absolute;
+    /* left: 50%;
+    translate: -50%; */
+    animation-name: move , moveon ;
+    animation-duration: 1s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        top: 0;
+        left: 100%;
+        translate: -100% 0;
+    }
+
+    50% {
+        top: 100%;
+        left: 100%;
+        translate: -100% -100%;
+    }
+    75% {
+        top: 100%;
+        left: 0%;
+        translate: 0% -100%;
+    }
+
+    to {
+        top: 0;
+        left: 0;
+    }
+}
+
