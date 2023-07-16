@@ -23,7 +23,7 @@ html {
 .item {
     width: 30%;
     margin: 12px 12px;
-    height: 220px;
+    height: 230px;
     padding: 40px 20px;
     border: 1px solid #ddd;
     position: relative;
@@ -60,10 +60,9 @@ html {
 }
 
 .item_info {
-    margin-top: -30px;
+    margin-top: -20px;
     padding: 12px;
-    height: 200px;
-    /* height: 100%; */
+    height: 183px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -108,13 +107,13 @@ html {
     text-decoration: none;
     position: absolute;
     transition: top 0.3s ease;
-    top: 160px;
+    top: 180px;
 }
 
 .item:hover .item_more {
     display: flex;
     opacity: 1;
-    top: 140px;
+    top: 130px;
 }
 
 .item_more-text {
