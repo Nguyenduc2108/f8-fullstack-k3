@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    background: #ddd;
+}
+
+.wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.envelope {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    border-top: 60px solid rgb(238, 89, 89);
+    border-right: 120px solid rgb(236, 111, 111);
+    border-bottom: 60px solid rgb(236, 111, 111);
+    border-left: 120px solid rgb(234, 87, 87);
+    transition: top 0.2s ease; 
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.envelope::after {
+    content: "";
+    position: absolute;
+    transform-origin: top;
+    top: -60px;
+    left: -120px;
+    border-top: 60px solid rgb(203, 59, 59);
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    transition: transform 0.2s ease;
+    z-index: -1;
+}
+
+.envelope:hover::after {
+    transform: rotateX(-180deg);
+
+}
+
+.envelope:hover {
+    transform: translateY(30px);
+}
+
+.letter {
+    position: absolute;
+    top: -50px;
+    left: -75px;
+    height: 150px;
+    width: 150px;
+    background: #fff;
+    transition: transform, opacity 0.3s ease;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.envelope:hover .letter {
+    transform: translateY(-80px);
+    opacity: 1;
+}
+
+.letter span:first-child {
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-image: linear-gradient(-45deg , 
+    red, transparent 10% , 
+    red, transparent 20%, 
+    red, transparent 30%, 
+    red, transparent 40%, 
+    red, transparent 50%, 
+    red, transparent 60%, 
+    red, transparent 70%,
+    red, transparent 80%,
+    red, transparent 90%,
+    red, transparent 100%);
+}
+
+.letter span:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    left: 10px; 
+    height: 6px;
+    width: 40px;
+    background: red;
+}
+
+.letter span:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 0px; 
+    height: 6px;
+    width: 25px;
+    background: red;
+}
+
+.letter span:nth-child(3) {
+    position: absolute;
+    top: 80px;
+    left: 110px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(240, 123, 123);
+    border-radius: 50%;
+}
+
+.envelope_shadow {
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    top: 80%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    filter: blur(5px);
+    transform: rotateX(45deg);
+    transition:width 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.envelope:hover ~ .envelope_shadow {
+    width: 200px;
+    transform: rotateX(45deg);
+}
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    background: #ddd;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    margin: 100px auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.tab {
+    position: relative;
+}
+
+.tab ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tab ul li {
+    background-color: #fff;
+    padding: 4px;
+    border: 1px solid #757575;
+}
+
+.tab ul li:first-child {
+    border-left: unset;
+}
+.tab ul li:last-child {
+    border-right: unset;
+}
+
+.tab ul li label {
+    text-decoration: none;
+    color: #757575;
+    padding: 10px;
+    background-color: #fff ;
+    display: block;
+    cursor: pointer;
+    transition: color , background-color 0.3s ease;
+}
+
+.tab_bar-one:checked ~ .tab ul li  label[for="tab_bar-one"] {
+    color: #fff;
+    background-color: #4298DB ;
+}
+.tab_bar-two:checked ~ .tab ul li label[for="tab_bar-two"] {
+    color: #fff;
+    background-color: #4298DB ;
+}
+.tab_bar-three:checked ~ .tab ul li label[for="tab_bar-three"] {
+    color: #fff;
+    background-color: #4298DB ;
+}
+.tab_bar-four:checked ~ .tab ul li label[for="tab_bar-four"] {
+    color: #fff;
+    background-color: #4298DB ;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    perspective: 1000px;
+    left: 0;
+    transform-origin: top;
+    color: #757575;
+}
+
+.item {
+    position: absolute;
+    padding: 20px;
+    background-color: #fff;
+    overflow-x: scroll;
+    transform-origin: top;
+    opacity: 0;
+    transform: rotateX(-70deg);
+    transition: transform , opacity 0.5s ease-in-out;
+}
+
+.tab_bar-one:checked ~ .tab .content .tab_bar-one ,
+.tab_bar-two:checked ~ .tab .content .tab_bar-two ,
+.tab_bar-three:checked ~ .tab .content .tab_bar-three ,
+.tab_bar-four:checked ~ .tab .content .tab_bar-four  {
+    transition-delay: 0.2s;
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.text {
+    line-height: 1.6;
+}
+
