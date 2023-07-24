@@ -1,0 +1,56 @@
+/* Comment Css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: green;
+}
+.header .header-inner {
+  padding: 10px 15px;
+}
+.header .logo {
+  max-height: 150px;
+  overflow: hidden;
+}
+.header img {
+  min-width: 100%;
+  height: auto;
+}
+
+.menu {
+  background: green;
+}
+.menu > ul {
+  display: flex;
+}
+.menu > ul > li.item {
+  flex: 1 0 auto;
+}
+.menu > ul > li.item > a {
+  display: block;
+  text-decoration: none;
+}
+.menu > ul > li.item > a:hover {
+  color: red;
+}
+.menu > ul > li.item > a::before {
+  content: "";
+}
+
+.footer {
+  padding: 20px 0;
+}
+.footer .copyright {
+  text-align: center;
+  color: grey;
+  font-size: 20%;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+/*# sourceMappingURL=ex02.css.map */
