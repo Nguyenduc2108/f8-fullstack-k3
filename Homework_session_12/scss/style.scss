@@ -8,7 +8,6 @@ $backgroundColorButton: #615dfa;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import "./grid.scss";
-@import "./responsive.scss";
 
 * , ::before , ::after {
     box-sizing: border-box;
@@ -44,7 +43,7 @@ html {
     .intro {
         position: absolute;
         top: 16%;
-        left: 0%;
+        left: 0;
         width: 584px;
         .logo {
             text-align: center;
@@ -373,6 +372,80 @@ html {
                 left: -80px;
             }
         }
+    }
+}
+
+
+@media (min-width: 575px) {
+    .container {
+        max-width: 540px;
+        margin: 30 auto;
+    }
+    .landing{
+        padding: 64px;
+        .lading_dot {
+            display: none;
+        }
+    }
+    .leading_form {
+        .rocket {
+            display: none;
+        } 
+        .form_login {
+            top: 0%;
+        }  
+    }
+    .intro {
+        top: 0;
+        .text {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 767px) {
+    .container {
+        max-width: 720px ;
+        margin: 0 auto;
+    }
+    .intro {
+        top: 0;
+        .text {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 991px) {
+    .container {
+        max-width: 960px ;
+        margin: 0 auto;
+    }
+    .landing{
+        .lading_dot {
+            display: block;
+        }
+    }
+    .leading_form {
+        .rocket {
+            display: none;
+        }   
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px ;
+        margin: 0 auto;
+    }
+    
+}
+
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1280px ;
+        margin: 0 auto;
     }
 }
 
