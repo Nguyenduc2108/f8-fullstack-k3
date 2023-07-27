@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* 
+Kế thừa trong SCSS
+
+1.extend 
+
+
+2.placehoder
+
+Định nghĩa placeholder
+%tenplaceholder {
+    thuoctinh1: value1;
+    thuoctinh2: value2;
+}
+
+3. mixin( 3 Loại)
+
+3.1. mixin không có tham số
+@mixin tenmixin {
+    //  nội dung mixin
+}
+
+3.2.mixin có tham số
+@mixin tenmixin($thamso1 , $thamso2,...) {
+    //  nội dung mixin
+}
+
+Gọi mixin
+@include tenmixin 
+
+@include tenmixin(doiso1 , doiso2,...)
+
+*/
+.products, .posts {
+  padding: 30px 0;
+  border: 1px solid #ccc;
+}
+
+.posts {
+  background: gray;
+}
+
+.products {
+  background: #ddd;
+}
+
+.products {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.container {
+  text-align: center;
+}
+.container > * {
+  display: inline-block;
+  text-align: left;
+}
+.container div {
+  width: 500px;
+  border: 1px solid red;
+}
+
+/*# sourceMappingURL=ex04.css.map */

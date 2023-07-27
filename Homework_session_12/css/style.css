@@ -1,0 +1,777 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+.col-1 {
+  --column-size: 1;
+}
+
+.col-2 {
+  --column-size: 2;
+}
+
+.col-3 {
+  --column-size: 3;
+}
+
+.col-4 {
+  --column-size: 4;
+}
+
+.col-5 {
+  --column-size: 5;
+}
+
+.col-6 {
+  --column-size: 6;
+}
+
+.col-7 {
+  --column-size: 7;
+}
+
+.col-8 {
+  --column-size: 8;
+}
+
+.col-9 {
+  --column-size: 9;
+}
+
+.col-10 {
+  --column-size: 10;
+}
+
+.col-11 {
+  --column-size: 11;
+}
+
+.col-12 {
+  --column-size: 12;
+}
+
+@media screen and (min-width: 576px) {
+  .col-sm-1 {
+    --column-size: 1;
+  }
+  .col-sm-2 {
+    --column-size: 2;
+  }
+  .col-sm-3 {
+    --column-size: 3;
+  }
+  .col-sm-4 {
+    --column-size: 4;
+  }
+  .col-sm-5 {
+    --column-size: 5;
+  }
+  .col-sm-6 {
+    --column-size: 6;
+  }
+  .col-sm-7 {
+    --column-size: 7;
+  }
+  .col-sm-8 {
+    --column-size: 8;
+  }
+  .col-sm-9 {
+    --column-size: 9;
+  }
+  .col-sm-10 {
+    --column-size: 10;
+  }
+  .col-sm-11 {
+    --column-size: 11;
+  }
+  .col-sm-12 {
+    --column-size: 12;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-1 {
+    --column-size: 1;
+  }
+  .col-md-2 {
+    --column-size: 2;
+  }
+  .col-md-3 {
+    --column-size: 3;
+  }
+  .col-md-4 {
+    --column-size: 4;
+  }
+  .col-md-5 {
+    --column-size: 5;
+  }
+  .col-md-6 {
+    --column-size: 6;
+  }
+  .col-md-7 {
+    --column-size: 7;
+  }
+  .col-md-8 {
+    --column-size: 8;
+  }
+  .col-md-9 {
+    --column-size: 9;
+  }
+  .col-md-10 {
+    --column-size: 10;
+  }
+  .col-md-11 {
+    --column-size: 11;
+  }
+  .col-md-12 {
+    --column-size: 12;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-1 {
+    --column-size: 1;
+  }
+  .col-lg-2 {
+    --column-size: 2;
+  }
+  .col-lg-3 {
+    --column-size: 3;
+  }
+  .col-lg-4 {
+    --column-size: 4;
+  }
+  .col-lg-5 {
+    --column-size: 5;
+  }
+  .col-lg-6 {
+    --column-size: 6;
+  }
+  .col-lg-7 {
+    --column-size: 7;
+  }
+  .col-lg-8 {
+    --column-size: 8;
+  }
+  .col-lg-9 {
+    --column-size: 9;
+  }
+  .col-lg-10 {
+    --column-size: 10;
+  }
+  .col-lg-11 {
+    --column-size: 11;
+  }
+  .col-lg-12 {
+    --column-size: 12;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-1 {
+    --column-size: 1;
+  }
+  .col-xl-2 {
+    --column-size: 2;
+  }
+  .col-xl-3 {
+    --column-size: 3;
+  }
+  .col-xl-4 {
+    --column-size: 4;
+  }
+  .col-xl-5 {
+    --column-size: 5;
+  }
+  .col-xl-6 {
+    --column-size: 6;
+  }
+  .col-xl-7 {
+    --column-size: 7;
+  }
+  .col-xl-8 {
+    --column-size: 8;
+  }
+  .col-xl-9 {
+    --column-size: 9;
+  }
+  .col-xl-10 {
+    --column-size: 10;
+  }
+  .col-xl-11 {
+    --column-size: 11;
+  }
+  .col-xl-12 {
+    --column-size: 12;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .col-xxl-1 {
+    --column-size: 1;
+  }
+  .col-xxl-2 {
+    --column-size: 2;
+  }
+  .col-xxl-3 {
+    --column-size: 3;
+  }
+  .col-xxl-4 {
+    --column-size: 4;
+  }
+  .col-xxl-5 {
+    --column-size: 5;
+  }
+  .col-xxl-6 {
+    --column-size: 6;
+  }
+  .col-xxl-7 {
+    --column-size: 7;
+  }
+  .col-xxl-8 {
+    --column-size: 8;
+  }
+  .col-xxl-9 {
+    --column-size: 9;
+  }
+  .col-xxl-10 {
+    --column-size: 10;
+  }
+  .col-xxl-11 {
+    --column-size: 11;
+  }
+  .col-xxl-12 {
+    --column-size: 12;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+.row [class^=col-] {
+  --column-number: calc(12 / var(--column-size));
+  --column-width:calc(100% / var(--column-number));
+  flex-basis: var(--column-width);
+  max-width: var(--column-width);
+  padding: 0 12px;
+}
+
+@media (min-width: 575px) {
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  .landing {
+    padding: 64px;
+  }
+  .landing .lading_dot {
+    position: unset;
+  }
+  .leading_form .rocket {
+    display: none;
+  }
+  .leading_form .form_login {
+    top: 0%;
+  }
+  .intro {
+    top: 0;
+  }
+  .intro .text {
+    display: none;
+  }
+}
+@media (min-width: 767px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+}
+
+.landing {
+  width: 100%;
+  height: 100%;
+  background: url(../images/landing-background.jpg) no-repeat 0;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.landing .lading_dot {
+  width: 64%;
+  height: 140%;
+  border-radius: 50%;
+  background: url(../images/dot-texture.png) repeat 0 0 #fff;
+  position: absolute;
+  top: -20%;
+  right: -32%;
+  pointer-events: none;
+}
+.landing .intro {
+  position: absolute;
+  top: 16%;
+  left: 0%;
+  width: 584px;
+}
+.landing .intro .logo {
+  text-align: center;
+}
+.landing .intro .welcome {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 36px 0 0 0;
+}
+.landing .intro .title {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 104px;
+  line-height: 104px;
+  font-weight: 700;
+}
+.landing .intro .text {
+  color: #fff;
+  width: 384px;
+  margin: 30px auto 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.landing .intro .btn {
+  margin: 90px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.landing .intro .btn .login,
+.landing .intro .btn .register {
+  width: 180px;
+  height: 54px;
+  color: #fff;
+  line-height: 54px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #fff;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.landing .intro .btn .login {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.landing .intro .btn .register {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.landing .input_login:checked ~ .intro .btn .login,
+.landing .input_register:checked + .intro .btn .register {
+  background-color: #fff;
+  color: #3e3f5e;
+  cursor: auto;
+}
+.landing .input_login:checked ~ .leading_form .form_login {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+.landing .input_register:checked ~ .leading_form .form_register {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+.landing .leading_form {
+  width: 484px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 13%;
+}
+.landing .leading_form .form_login,
+.landing .leading_form .form_register {
+  width: 100%;
+  min-height: 625px;
+  background-color: #fff;
+  padding: 64px;
+  position: absolute;
+  top: 50%;
+  left: 300px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  border-radius: 12px;
+  box-shadow: 0 0 60px 0 rgba(94, 92, 154, 0.12);
+  transition: 0.5s ease-in-out;
+  transition-property: opacity, left, visibility;
+}
+.landing .leading_form .form_login .rocket,
+.landing .leading_form .form_register .rocket {
+  position: absolute;
+  top: -68px;
+  left: -80px;
+}
+.landing .leading_form .form_login .heading,
+.landing .leading_form .form_register .heading {
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #3e3f5e;
+  text-align: center;
+  text-transform: capitalize;
+}
+.landing .leading_form .form_login .login_body,
+.landing .leading_form .form_login .register_body,
+.landing .leading_form .form_register .login_body,
+.landing .leading_form .form_register .register_body {
+  margin: 76px 0 0 0;
+  width: 100%;
+}
+.landing .leading_form .form_login .login_body .form_input,
+.landing .leading_form .form_login .register_body .form_input,
+.landing .leading_form .form_register .login_body .form_input,
+.landing .leading_form .form_register .register_body .form_input {
+  margin: 28px 0 0 0;
+  position: relative;
+}
+.landing .leading_form .form_login .login_body .form_input input,
+.landing .leading_form .form_login .register_body .form_input input,
+.landing .leading_form .form_register .login_body .form_input input,
+.landing .leading_form .form_register .register_body .form_input input {
+  width: 100%;
+  height: 54px;
+  padding: 18px;
+  background-color: #fff;
+  color: #3e3f5e;
+  border: 1px solid #dedeea;
+  font-weight: 700;
+  border-radius: 12px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  transition-property: border, color;
+}
+.landing .leading_form .form_login .login_body .form_input input:focus,
+.landing .leading_form .form_login .register_body .form_input input:focus,
+.landing .leading_form .form_register .login_body .form_input input:focus,
+.landing .leading_form .form_register .register_body .form_input input:focus {
+  border: 1px solid #007bff;
+}
+.landing .leading_form .form_login .login_body .form_input input:focus + label,
+.landing .leading_form .form_login .register_body .form_input input:focus + label,
+.landing .leading_form .form_register .login_body .form_input input:focus + label,
+.landing .leading_form .form_register .register_body .form_input input:focus + label {
+  top: -6px;
+  left: 12px;
+  font-size: 12px;
+  padding: 0 6px;
+  background-color: #fff;
+}
+.landing .leading_form .form_login .login_body .info_fill,
+.landing .leading_form .form_login .register_body .info_fill,
+.landing .leading_form .form_register .login_body .info_fill,
+.landing .leading_form .form_register .register_body .info_fill {
+  color: #adafca;
+  font-weight: 600;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: 0.3s ease-in-out;
+  transition-property: top, left, font-size, padding, background-color;
+  pointer-events: none;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap,
+.landing .leading_form .form_login .login_body .register_body-wrap,
+.landing .leading_form .form_login .register_body .login_body-wrap,
+.landing .leading_form .form_login .register_body .register_body-wrap,
+.landing .leading_form .form_register .login_body .login_body-wrap,
+.landing .leading_form .form_register .login_body .register_body-wrap,
+.landing .leading_form .form_register .register_body .login_body-wrap,
+.landing .leading_form .form_register .register_body .register_body-wrap {
+  margin: 28px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .remember,
+.landing .leading_form .form_login .login_body .register_body-wrap .remember,
+.landing .leading_form .form_login .register_body .login_body-wrap .remember,
+.landing .leading_form .form_login .register_body .register_body-wrap .remember,
+.landing .leading_form .form_register .login_body .login_body-wrap .remember,
+.landing .leading_form .form_register .login_body .register_body-wrap .remember,
+.landing .leading_form .form_register .register_body .login_body-wrap .remember,
+.landing .leading_form .form_register .register_body .register_body-wrap .remember {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  position: relative;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .remember input:checked + .check_box,
+.landing .leading_form .form_login .login_body .register_body-wrap .remember input:checked + .check_box,
+.landing .leading_form .form_login .register_body .login_body-wrap .remember input:checked + .check_box,
+.landing .leading_form .form_login .register_body .register_body-wrap .remember input:checked + .check_box,
+.landing .leading_form .form_register .login_body .login_body-wrap .remember input:checked + .check_box,
+.landing .leading_form .form_register .login_body .register_body-wrap .remember input:checked + .check_box,
+.landing .leading_form .form_register .register_body .login_body-wrap .remember input:checked + .check_box,
+.landing .leading_form .form_register .register_body .register_body-wrap .remember input:checked + .check_box {
+  border: 1px solid #dedeea;
+  background-color: #fff;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .remember input:checked + .check_box i,
+.landing .leading_form .form_login .login_body .register_body-wrap .remember input:checked + .check_box i,
+.landing .leading_form .form_login .register_body .login_body-wrap .remember input:checked + .check_box i,
+.landing .leading_form .form_login .register_body .register_body-wrap .remember input:checked + .check_box i,
+.landing .leading_form .form_register .login_body .login_body-wrap .remember input:checked + .check_box i,
+.landing .leading_form .form_register .login_body .register_body-wrap .remember input:checked + .check_box i,
+.landing .leading_form .form_register .register_body .login_body-wrap .remember input:checked + .check_box i,
+.landing .leading_form .form_register .register_body .register_body-wrap .remember input:checked + .check_box i {
+  color: #3e3f5e;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .remember .check_box,
+.landing .leading_form .form_login .login_body .register_body-wrap .remember .check_box,
+.landing .leading_form .form_login .register_body .login_body-wrap .remember .check_box,
+.landing .leading_form .form_login .register_body .register_body-wrap .remember .check_box,
+.landing .leading_form .form_register .login_body .login_body-wrap .remember .check_box,
+.landing .leading_form .form_register .login_body .register_body-wrap .remember .check_box,
+.landing .leading_form .form_register .register_body .login_body-wrap .remember .check_box,
+.landing .leading_form .form_register .register_body .register_body-wrap .remember .check_box {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid #23d2e2;
+  background-color: #23d2e2;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+  transition-property: border-color, background-color;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .remember .check_box i,
+.landing .leading_form .form_login .login_body .register_body-wrap .remember .check_box i,
+.landing .leading_form .form_login .register_body .login_body-wrap .remember .check_box i,
+.landing .leading_form .form_login .register_body .register_body-wrap .remember .check_box i,
+.landing .leading_form .form_register .login_body .login_body-wrap .remember .check_box i,
+.landing .leading_form .form_register .login_body .register_body-wrap .remember .check_box i,
+.landing .leading_form .form_register .register_body .login_body-wrap .remember .check_box i,
+.landing .leading_form .form_register .register_body .register_body-wrap .remember .check_box i {
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+  display: block;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .remember .remember_login,
+.landing .leading_form .form_login .login_body .register_body-wrap .remember .remember_login,
+.landing .leading_form .form_login .register_body .login_body-wrap .remember .remember_login,
+.landing .leading_form .form_login .register_body .register_body-wrap .remember .remember_login,
+.landing .leading_form .form_register .login_body .login_body-wrap .remember .remember_login,
+.landing .leading_form .form_register .login_body .register_body-wrap .remember .remember_login,
+.landing .leading_form .form_register .register_body .login_body-wrap .remember .remember_login,
+.landing .leading_form .form_register .register_body .register_body-wrap .remember .remember_login {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  padding: 0 0 0 34px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  text-transform: capitalize;
+  color: #3e3f5e;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .forgot,
+.landing .leading_form .form_login .login_body .register_body-wrap .forgot,
+.landing .leading_form .form_login .register_body .login_body-wrap .forgot,
+.landing .leading_form .form_login .register_body .register_body-wrap .forgot,
+.landing .leading_form .form_register .login_body .login_body-wrap .forgot,
+.landing .leading_form .form_register .login_body .register_body-wrap .forgot,
+.landing .leading_form .form_register .register_body .login_body-wrap .forgot,
+.landing .leading_form .form_register .register_body .register_body-wrap .forgot {
+  width: auto;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .forgot .forgot_link,
+.landing .leading_form .form_login .login_body .register_body-wrap .forgot .forgot_link,
+.landing .leading_form .form_login .register_body .login_body-wrap .forgot .forgot_link,
+.landing .leading_form .form_login .register_body .register_body-wrap .forgot .forgot_link,
+.landing .leading_form .form_register .login_body .login_body-wrap .forgot .forgot_link,
+.landing .leading_form .form_register .login_body .register_body-wrap .forgot .forgot_link,
+.landing .leading_form .form_register .register_body .login_body-wrap .forgot .forgot_link,
+.landing .leading_form .form_register .register_body .register_body-wrap .forgot .forgot_link {
+  display: block;
+  color: #adafca;
+  font-weight: 700;
+  line-height: 22px;
+  text-decoration: none;
+  animation: color 0.3s ease-in-out;
+  background-color: transparent;
+}
+.landing .leading_form .form_login .login_body .login_body-wrap .forgot .forgot_link:hover,
+.landing .leading_form .form_login .login_body .register_body-wrap .forgot .forgot_link:hover,
+.landing .leading_form .form_login .register_body .login_body-wrap .forgot .forgot_link:hover,
+.landing .leading_form .form_login .register_body .register_body-wrap .forgot .forgot_link:hover,
+.landing .leading_form .form_register .login_body .login_body-wrap .forgot .forgot_link:hover,
+.landing .leading_form .form_register .login_body .register_body-wrap .forgot .forgot_link:hover,
+.landing .leading_form .form_register .register_body .login_body-wrap .forgot .forgot_link:hover,
+.landing .leading_form .form_register .register_body .register_body-wrap .forgot .forgot_link:hover {
+  color: #23d2e2;
+}
+.landing .leading_form .form_login .login_body .login_btn,
+.landing .leading_form .form_login .login_body .register_btn,
+.landing .leading_form .form_login .register_body .login_btn,
+.landing .leading_form .form_login .register_body .register_btn,
+.landing .leading_form .form_register .login_body .login_btn,
+.landing .leading_form .form_register .login_body .register_btn,
+.landing .leading_form .form_register .register_body .login_btn,
+.landing .leading_form .form_register .register_body .register_btn {
+  width: 100%;
+  color: #fff;
+  height: 54px;
+  font-size: 14px;
+  line-height: 54px;
+  margin: 28px 0 0 0;
+  background-color: #615dfa;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, 0.2);
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.9;
+  display: block;
+  animation: opacity 0.5s ease-in-out;
+}
+.landing .leading_form .form_login .login_body .login_btn:hover,
+.landing .leading_form .form_login .login_body .register_btn:hover,
+.landing .leading_form .form_login .register_body .login_btn:hover,
+.landing .leading_form .form_login .register_body .register_btn:hover,
+.landing .leading_form .form_register .login_body .login_btn:hover,
+.landing .leading_form .form_register .login_body .register_btn:hover,
+.landing .leading_form .form_register .register_body .login_btn:hover,
+.landing .leading_form .form_register .register_body .register_btn:hover {
+  opacity: 1;
+}
+.landing .leading_form .form_login .login_body .register_btn,
+.landing .leading_form .form_login .register_body .register_btn,
+.landing .leading_form .form_register .login_body .register_btn,
+.landing .leading_form .form_register .register_body .register_btn {
+  background-color: #23d2e2;
+}
+.landing .leading_form .form_login .login_footer .text,
+.landing .leading_form .form_register .login_footer .text {
+  margin: 40px 0 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+.landing .leading_form .form_login .login_footer .text::before,
+.landing .leading_form .form_register .login_footer .text::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 0;
+  height: 1px;
+  width: 70px;
+  background-color: #eaeaf5;
+}
+.landing .leading_form .form_login .login_footer .text::after,
+.landing .leading_form .form_register .login_footer .text::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: 0;
+  height: 1px;
+  width: 70px;
+  background-color: #eaeaf5;
+}
+.landing .leading_form .form_login .login_footer .socials,
+.landing .leading_form .form_register .login_footer .socials {
+  margin: 30px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.landing .leading_form .form_login .login_footer .socials .social_link,
+.landing .leading_form .form_register .login_footer .socials .social_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  color: #fff;
+}
+.landing .leading_form .form_login .login_footer .socials .social_link:nth-child(1),
+.landing .leading_form .form_register .login_footer .socials .social_link:nth-child(1) {
+  background-color: #3763d2;
+  margin-right: 12px;
+}
+.landing .leading_form .form_login .login_footer .socials .social_link:nth-child(2),
+.landing .leading_form .form_register .login_footer .socials .social_link:nth-child(2) {
+  background-color: #1abcff;
+  margin-right: 12px;
+}
+.landing .leading_form .form_login .login_footer .socials .social_link:nth-child(3),
+.landing .leading_form .form_register .login_footer .socials .social_link:nth-child(3) {
+  background-color: #7b5dfa;
+  margin-right: 12px;
+}
+.landing .leading_form .form_login .login_footer .socials .social_link:nth-child(4),
+.landing .leading_form .form_register .login_footer .socials .social_link:nth-child(4) {
+  background-color: #fd434f;
+}
+.landing .leading_form .form_login .login_footer .socials .social_link img,
+.landing .leading_form .form_register .login_footer .socials .social_link img {
+  height: 12px;
+  width: 12px;
+  display: block;
+}
+.landing .leading_form .form_login .register_footer,
+.landing .leading_form .form_register .register_footer {
+  margin: 30px 0 0 0;
+}
+.landing .leading_form .form_login .register_footer .text,
+.landing .leading_form .form_register .register_footer .text {
+  font-size: 14px;
+  font-weight: 50;
+  line-height: 1.7em;
+  color: #3e3f5e;
+}
+.landing .leading_form .form_login .register_footer .text a,
+.landing .leading_form .form_register .register_footer .text a {
+  color: #23d2e2;
+  text-decoration: none;
+}
+.landing .leading_form .form_register {
+  z-index: 1;
+}
+.landing .leading_form .form_register .rocket {
+  position: absolute;
+  top: -14px;
+  left: -80px;
+}
+
+/*# sourceMappingURL=style.css.map */

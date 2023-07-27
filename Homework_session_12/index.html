@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="landing">
+      <div class="container">
+        <div class="lading_dot"></div>
+        <input
+          class="input_login"
+          type="radio"
+          name="switch"
+          id="input_login"
+          hidden
+        />
+        <input
+          class="input_register"
+          type="radio"
+          name="switch"
+          id="input_register"
+          hidden
+          checked
+        />
+        <!-- begin .intro -->
+        <section class="intro">
+          <div class="logo">
+            <img src="./images/logo_1.svg" alt="" class="intro_img" />
+          </div>
+          <h1 class="welcome">WELCOME TO</h1>
+          <h2 class="title">VIKINGER</h2>
+          <p class="text">
+            The next generation social network & community! Connect with your
+            friends and play with our quests and badges gamification system!
+          </p>
+
+          <!-- begin .btn -->
+          <div class="btn">
+            <label for="input_login" class="login">Login</label>
+            <label for="input_register" class="register">Register</label>
+          </div>
+          <!-- end .btn -->
+        </section>
+        <!-- end .intro -->
+
+        <!-- begin .leading_form -->
+        <section class="leading_form">
+          <!-- begin .form_login -->
+
+          <!-- begin .form_login -->
+          <form action="" method="get" class="form_login">
+            <div class="rocket">
+              <img src="./images/rocket.png" alt="" class="rocket_img" />
+            </div>
+            <h3 class="heading">Account Login</h3>
+            <div class="login_body">
+              <div class="form_input">
+                <input type="email" id="input_name" />
+                <label class="info_fill" for="input_name"
+                  >Username or Email</label
+                >
+              </div>
+              <div class="form_input">
+                <input type="password" id="input_password" />
+                <label class="info_fill" for="input_password">Password</label>
+              </div>
+
+              <!-- begin .login_body-wrap -->
+              <div class="login_body-wrap">
+                <div class="remember">
+                  <input type="checkbox" id="login_remember" hidden />
+                  <div class="check_box">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <label class="remember_login" for="remember_login"
+                    >Remember Me</label
+                  >
+                </div>
+                <div class="forgot">
+                  <a href="#" class="forgot_link">Forgot Password?</a>
+                </div>
+              </div>
+              <!-- end .login_body-wrap -->
+              <button class="login_btn">Login to your Account!</button>
+            </div>
+            <!-- end .login_body -->
+
+            <!-- begin .login_footer -->
+            <footer class="login_footer">
+              <p class="text">Login with your Social Account</p>
+              <div class="socials">
+                <a href="#" class="social_link">
+                  <img src="./images/svgexport-3.svg" alt="" />
+                </a>
+                <a href="#" class="social_link">
+                  <img src="./images/svgexport-4.svg" alt="" />
+                </a>
+                <a href="#" class="social_link">
+                  <img src="./images/svgexport-5.svg" alt="" />
+                </a>
+                <a href="#" class="social_link">
+                  <img src="./images/svgexport-6.svg" alt="" />
+                </a>
+              </div>
+            </footer>
+          </form>
+          <!-- end .form_login -->
+        </section>
+        <!-- end .leading_form -->
+
+        <!-- begin .leading_form -->
+        <section class="leading_form">
+          <!-- begin .form_register -->
+          <form action="" method="get" class="form_register">
+            <div class="rocket">
+              <img src="./images/rocket.png" alt="" class="rocket_img" />
+            </div>
+            <h3 class="heading">Create your Account!</h3>
+            <div class="register_body">
+              <div class="form_input">
+                <input type="email" id="input_name" />
+                <label class="info_fill" for="input_name">Your Email</label>
+              </div>
+              <div class="form_input">
+                <input type="text" id="input_password" />
+                <label class="info_fill" for="input_password">Username</label>
+              </div>
+              <div class="form_input">
+                <input type="password" id="input_password" />
+                <label class="info_fill" for="input_password">Password</label>
+              </div>
+              <div class="form_input">
+                <input type="password" id="input_password" />
+                <label class="info_fill" for="input_password"
+                  >Repeat Password</label
+                >
+              </div>
+
+              <!-- begin .register_body-wrap -->
+              <div class="register_body-wrap">
+                <div class="remember">
+                  <input type="checkbox" id="login_remember" hidden />
+                  <div class="check_box">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                  <label class="remember_login" for="remember_login"
+                    >Send me news and updates via email</label
+                  >
+                </div>
+              </div>
+              <!-- end .register_body-wrap -->
+              <button class="register_btn">Register Now!</button>
+            </div>
+            <!-- end .login_body -->
+
+            <!-- begin .login_footer -->
+            <footer class="register_footer">
+              <p class="text">
+                You'll receive a confirmation email in your inbox with a link to
+                activate your account. If you have any problems,
+                <a href="#">contact us!</a>
+              </p>
+            </footer>
+          </form>
+          <!-- end .form_register -->
+        </section>
+        <!-- end .leading_form -->
+      </div>
+    </div>
+  </body>
+</html>

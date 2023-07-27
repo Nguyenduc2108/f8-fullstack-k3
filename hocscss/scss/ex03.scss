@@ -1,0 +1,74 @@
+/* 
+Toán tử và biểu thức
+
+Biểu thức = toán tử và toán hạng
+
+s = a + b + c 
+s,a.b.c => Toán hạng
+=,+ => Toán tử
+
+1. Toán tử số học
++ , - , x , / , %(Chia lấy dư)
+
+2 Toán tử so sánh
+> , < , >= , <= , != , = 
+
+=> Trả về kết quả đúng hoặc sai ( true , false)
+
+33.Toán tử gán
+:
+Ví dụ: $a: 1;
+
+4. Toán tử lý luận(Kết hợp)
+and , or , not 
+
+Câu lệnh rẽ nhánh
+
+@if (condition) {
+    // body
+}
+
+
+@if (condition) {
+    // body true
+} @else {
+    //  body false
+}
+
+
+@if (condition) {
+    // body 
+} @else if(condition) {
+    //  body 
+} @else if(condition) {
+    //  body 
+} @else if(condition) {
+    // body else
+}
+*/
+
+// $a: 1;
+// $b: 2;
+// $c: $a + $b;
+// $c: $c + 2;
+
+// .test {
+//     font-size: #{$c}em;
+// }
+
+// $number: 5;
+// @if($number % 2 != 0) {
+//     .col-small {
+//         font-size: #{$number * 2}px;
+//     }
+// } @else {
+//     .col-medium {
+//         font-size: #{$number * 5}px;
+//     }
+// }
+
+@if ($number >= 2 and $number <= 10) {
+    .test {
+        font-size: #{$number * 10}px;
+    }
+}

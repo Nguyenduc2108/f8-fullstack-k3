@@ -1,0 +1,85 @@
+@import "parts/mixin.scss";
+
+/* 
+Kế thừa trong SCSS
+
+1.extend 
+
+
+2.placehoder
+
+Định nghĩa placeholder
+%tenplaceholder {
+    thuoctinh1: value1;
+    thuoctinh2: value2;
+}
+
+3. mixin( 3 Loại)
+
+3.1. mixin không có tham số
+@mixin tenmixin {
+    //  nội dung mixin
+}
+
+3.2.mixin có tham số
+@mixin tenmixin($thamso1 , $thamso2,...) {
+    //  nội dung mixin
+}
+
+Gọi mixin
+@include tenmixin 
+
+@include tenmixin(doiso1 , doiso2,...)
+
+*/
+
+%section-base {
+    padding: 30px 0;
+    border: 1px solid #ccc;
+} 
+
+.posts {
+    background: gray;
+    @extend %section-base;
+}
+
+.products {
+    background: #ddd;
+    @extend %section-base;
+}
+
+// .menu {
+//     li {
+//         a {
+//             display: block;
+//             &.active {
+//                 color:green;
+//                 font-weight: 400;
+//             }
+//             &:hover {
+//                 @extend .active;
+//             }
+//         }
+//     }
+// }
+
+// .container {
+//     @include center(1000px ,30px) ;
+//     background: gray;
+// }
+
+.products {
+    @include position(tl, 10px, 20px);
+}
+
+.container {
+    @include center(txt);
+    
+    div {
+        width: 500px;
+        border: 1px solid red;
+    }
+
+}    
+
+
