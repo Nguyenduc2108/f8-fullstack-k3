@@ -1,0 +1,93 @@
+.hero {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $textColor;
+        .title {
+            font-size: 3.6rem;
+            font-style: normal;
+            line-height: 48px;
+            font-weight: 800;
+        }
+
+        .heading {
+            font-size: 43px;
+            font-weight: 800;
+            line-height: normal;
+            font-style: normal;
+            width: 420px;
+            margin: 16px 0 0 0;
+        }
+
+        .text {
+            font-style: normal;
+            font-size: 1.6rem;
+            font-style: normal;
+            line-height: 20px;
+            font-weight: 400;
+            margin: 24px 0 20px 0;
+            width: 450px;
+        }
+    }
+
+    .media {
+        background-color: $bgGreen;
+        width: 48vw;
+        position: relative;
+        height: 48vw;
+        .media-img {
+            img {
+                position: absolute;
+                top: 20px;
+                left: -130px;
+                width: 100%;
+            }
+        }
+        .desc {
+            position: absolute;
+            top: 50%;
+            right: -180px;
+            font-size: 12rem;
+            color: $greenColor1;
+            font-style: normal;
+            line-height: 12rem;
+            transform: rotate(90deg);
+            opacity: 0.15000000596046448;
+            font-weight: 800;
+            width: 615px;
+
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .hero {
+        .intro {
+            .heading {
+                width: 100%;
+            }
+            .text {
+                width: 100%;
+            }
+        }
+        .media {
+            height: 50vw;
+            .media-img {
+                img {
+                    position: absolute;
+                    top: -40px;
+                    left: 0;
+                    width: 60%;
+                }
+            }
+            .desc {
+                position: absolute;
+                top: 50%;
+                right: -300px;
+                transform: translateY(-50%);
+                font-size: 9.4rem;
+            }
+        }
+    }
+}

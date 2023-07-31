@@ -1,0 +1,27 @@
+.container {
+    --container-width: 1200px;
+}
+
+.just-content-start {
+    justify-content: flex-start;
+}
+
+.just-content-center {
+    justify-content: center;
+}
+
+.just-content-end {
+    justify-content: flex-end;
+}
+
+.align-item-start {
+    align-items: flex-start;
+}
+
+.align-item-center {
+    align-items: center;
+}
+
+.align-item-end {
+    align-items: flex-end;
+}

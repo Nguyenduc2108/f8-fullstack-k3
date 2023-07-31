@@ -1,0 +1,55 @@
+.help {
+    .image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .info {
+        .title {
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2.6rem;
+            margin-bottom: 15px;
+        }
+
+        .info-body {
+            input {
+                max-width: 100%;
+                border-radius: 6px;
+                border: 1px solid $grayColor;
+                padding: 13.333px 491.667px 13.333px 13.333px;
+                margin-top: 12px;
+                margin-bottom: 12px;
+            }
+            .contact {
+                input {
+                    max-width: 100%;
+                    padding: 13.333px 176.667px 13.333px 13.333px;
+                }
+            }
+            textarea {
+                width: 100%;
+                border-radius: 6px;
+                padding: 13.333px;
+                border: 1px solid $grayColor;
+            }
+        }
+
+        .info-btn {
+            text-align: right;
+            .btn-send {
+                padding: 13px 44px;
+                border-radius: 6px;
+                background: $primaryColor;
+                display: inline-block;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                color: $bgWhile;
+            }
+        }
+    }
+}

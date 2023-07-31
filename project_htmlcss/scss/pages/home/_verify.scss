@@ -1,0 +1,39 @@
+.verify {
+    padding: 100px 0;
+    .list {
+        .item {
+            display: flex;
+            align-items: start;
+            margin-top: 12px;
+            margin-bottom: 20px;
+            .item-img {
+                img {
+
+                }
+            }
+            
+            .item-info {
+                margin-left: 15px; 
+                .title {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    font-style: normal;
+                    line-height: 2.6rem;
+                }
+                .text {
+                    font-size: 1.7rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991.98px) {
+    .verify {
+        padding: 10px 0;
+    }
+}
