@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 1000px;
+  margin: 30px auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.item:nth-child(3) {
+  border-bottom: none;
+}
+.image {
+  margin: 0 30px 0 0;
+}
+
+.item img {
+  width: 350px;
+  height: auto;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-size: 18px;
+}
