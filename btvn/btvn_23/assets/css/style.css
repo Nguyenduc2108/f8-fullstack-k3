@@ -6,17 +6,18 @@
   outline: none;
 }
 .login {
-  margin-left: 20px;
+  margin: 50px;
   cursor: pointer;
 }
 
 .btn-login {
   border: none;
-  padding: 4px;
+  padding: 10px;
   outline: none;
   font-weight: 600;
-  color: #717070;
-  background-color: #fff;
+  color: #f4eded;
+  background-color: #fa4646;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -31,7 +32,6 @@
   font-size: 20px;
 }
 
-/* MODAL CONTAINER */
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -198,7 +198,6 @@
   opacity: 0.8;
 }
 
-/* DESCRIPTION */
 .desc-register {
   display: block;
   text-align: center;
@@ -214,7 +213,6 @@
   color: #306aff;
 }
 
-/* OVERLAY */
 .overlay {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -223,7 +221,6 @@
   visibility: hidden;
   transition: 0.4s ease-in-out;
   transition-property: opacity, visibility;
-  /* z-index: 0; */
 }
 
 .modal.show .overlay {
@@ -231,16 +228,11 @@
   visibility: visible;
 }
 
-/* FOR JS */
 .no-active {
-  background-color: #eee;
-  color: #999;
+  background-color: #fff;
+  color: red;
   width: 100%;
 }
-
-/* .modal.show .modal-container {
-    top: 30px;
-  } */
 
 .modal.show {
   opacity: 1;
