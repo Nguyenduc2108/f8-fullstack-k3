@@ -26,7 +26,7 @@ const products = [
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function saveCartToLocalStorage() {
+function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
@@ -36,7 +36,7 @@ function deleteProduct(productId) {
   );
   if (existingProductIndex !== -1) {
     cart.splice(existingProductIndex, 1);
-    saveCartToLocalStorage();
+    saveCart();
     renderCart();
   }
 }
@@ -57,7 +57,7 @@ function updateProductCart() {
       }
     }
   });
-  saveCartToLocalStorage();
+  saveCart();
   renderCart();
 }
 
@@ -104,7 +104,7 @@ function renderProduct() {
           productToAdd.total = productToAdd.price * quantityValue;
           cart.push(productToAdd);
         }
-        saveCartToLocalStorage();
+        saveCart();
         renderCart();
       }
     });
@@ -129,7 +129,7 @@ function updateCartSummary() {
 
 function clearCart() {
   cart.length = 0;
-  saveCartToLocalStorage();
+  saveCart();
   renderCart();
 }
 
