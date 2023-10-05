@@ -65,6 +65,55 @@ getUser()
   })
   .catch((error) => {
     console.log(error);
+  })
+  .finally(() => {
+    console.log("hoan thanh");
   });
 
 // promise chaining
+
+const getA = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("get A");
+    }, 1000);
+  });
+};
+const getB = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("get A");
+    }, 500);
+  });
+};
+const getC = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("get A");
+    }, 2000);
+  });
+};
+// Hiển thị theo đúng thứ tự  get A => Get B => get C
+// getA().then((dataA) => {
+//   console.log(dataA);
+//   getB().then((dataB) => {
+//     console.log(dataB);
+//     getC().then((dataC) => {
+//       console.log(dataC);
+//     });
+//   });
+// });
+
+//Promise Chaining
+getA()
+  .then((data) => {
+    console.log(data);
+    return getB();
+  })
+  .then((data) => {
+    console.log(data);
+    return getC();
+  })
+  .then((data) => {
+    console.log(data);
+  });
