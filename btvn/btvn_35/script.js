@@ -1,50 +1,70 @@
 let isLoading = false;
+let page = 1;
 
-function fetchPosts() {
+const showLoading = () => {
+  document.getElementById("loading").style.display = "block";
+};
+
+const hideLoading = () => {
+  document.getElementById("loading").style.display = "none";
+};
+
+const createPostElement = (post) => {
+  const postElement = document.createElement("article");
+  postElement.classList.add("post");
+
+  postElement.innerHTML = `
+    <h2>${post.title}</h2>
+    <p>${post.content}</p>
+    <div><img src="${post.image}" alt="image" /></div>
+  `;
+
+  return postElement;
+};
+
+const appendPosts = (data) => {
+  const postList = document.getElementById("post-list");
+  data.forEach((post) => {
+    const postElement = createPostElement(post);
+    postList.appendChild(postElement);
+  });
+};
+
+const fetchData = async () => {
+  try {
+    const response = await fetch(`https://35c3j3-8080.csb.app/post`);
+
+    if (!response.ok) {
+      throw new Error("Network error");
+    }
+
+    const data = await response.json();
+
+    if (data.length === 0) {
+      page = 1;
+      return;
+    }
+
+    appendPosts(data);
+    page++;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  } finally {
+    hideLoading();
+    isLoading = false;
+  }
+};
+
+const fetchPosts = () => {
   if (isLoading) {
     return;
   }
 
   isLoading = true;
-  document.getElementById("loading").style.display = "block";
+  showLoading();
 
-  setTimeout(() => {
-    fetch(`https://35c3j3-8080.csb.app/post`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("lỗi mạng");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        document.getElementById("loading").style.display = "none";
-        isLoading = false;
-
-        if (data.length === 0) {
-          page = 1;
-          fetchPosts();
-          return;
-        }
-
-        data.forEach((post) => {
-          const postElement = `
-                         <div class="post">
-                              <h2>${post.title}</h2>
-                              <p>${post.content}</p>
-                              <div><img src="${post.image}" alt="image" /></div>
-                         </div>
-                    `;
-          document.getElementById("post-list").innerHTML += postElement;
-        });
-        page++;
-      })
-      .catch((error) => {
-        document.getElementById("loading").style.display = "none";
-        isLoading = false;
-        console.error("Error fetching the data:", error);
-      });
-  }, 1500);
-}
+  setTimeout(fetchData, 1500);
+};
 
 fetchPosts();
 
