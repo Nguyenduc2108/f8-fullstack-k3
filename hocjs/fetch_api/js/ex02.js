@@ -3,118 +3,101 @@
 // -> giải quyết các bài toán phức tạp trong bài toán liên quan đến API trong dự án
 
 import { client } from "./client.js";
+import { config } from "./config.js";
+const { PAGE_LIMIT } = config;
 
-/*
- <div class="row g-3">
-          <div class="col-6 col-lg-4">
-            <div class="post-item border p-3">
-              <h3>
-                <a href="#" class="text-decoration-none">Tieu de bai viet 1</a>
-              </h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Exercitationem, quam, laboriosam adipisci facere impedit
-                suscipit inventore ullam recusandae fugiat explicabo sequi odit
-                assumenda ab eligendi nihil nesciunt facilis iste aliquam.
-              </p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="post-item border p-3">
-              <h3>
-                <a href="#" class="text-decoration-none">Tieu de bai viet 1</a>
-              </h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Exercitationem, quam, laboriosam adipisci facere impedit
-                suscipit inventore ullam recusandae fugiat explicabo sequi odit
-                assumenda ab eligendi nihil nesciunt facilis iste aliquam.
-              </p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="post-item border p-3">
-              <h3>
-                <a href="#" class="text-decoration-none">Tieu de bai viet 1</a>
-              </h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Exercitationem, quam, laboriosam adipisci facere impedit
-                suscipit inventore ullam recusandae fugiat explicabo sequi odit
-                assumenda ab eligendi nihil nesciunt facilis iste aliquam.
-              </p>
-            </div>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="post-item border p-3">
-              <h3>
-                <a href="#" class="text-decoration-none">Tieu de bai viet 1</a>
-              </h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Exercitationem, quam, laboriosam adipisci facere impedit
-                suscipit inventore ullam recusandae fugiat explicabo sequi odit
-                assumenda ab eligendi nihil nesciunt facilis iste aliquam.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-*/
+const paginationNav = document.querySelector(".pagination-nav");
 
 const render = (posts) => {
-  const stripHTML = (html) => html.replace(/(<([^>]+)>)/gi, "");
+  const stripHtml = (html) => html.replace(/(<([^>]+)>)/gi, "");
 
   const postsEl = document.querySelector(".posts");
-  console.log(posts);
 
   const postsHtml = posts
     .map(
-      ({ title, excerpt }) => `
-  <div class="col-6 col-lg-4">
-  <div class="post-item border p-3">
-      <h3><a href="#" class="text-decoration-none">${stripHTML(title)}</a></h3>
-      <p>${stripHTML(excerpt)}</p>
-  </div>
-</div>
-  `
+      ({ title, excerpt }) =>
+        `<div class="col-6 col-lg-4">
+      <div class="post-item border p-3">
+      <h3><a href="#" class="text-decoration-none">${stripHtml(title)}</a></h3>
+      <p>${stripHtml(excerpt)}</p>
+      </div>
+      </div>
+      `
     )
     .join(" ");
-
-  //   posts.forEach(({ title, excerpt, content }) => {
-  //     console.log(excerpt);
-  //     postsHtml += `
-  //     <div class="col-6 col-lg-4">
-  //         <div class="post-item border p-3">
-  //             <h3><a href="#" class="text-decoration-none">${title}</a></h3>
-  //             <p>${excerpt}</p>
-  //         </div>
-  //     </div>
-  //     `;
-  //   });
 
   postsEl.innerHTML = `
   <div class="row g-3">
   ${postsHtml}
-  </div>`;
+  </div>
+  `;
+};
+
+const renderPaginate = (totalPages) => {
+  //totalPages => tổng số trang
+  paginationNav.innerText = "";
+  if (totalPages > 1) {
+    paginationNav.innerHTML = `<ul class="pagination">
+  ${
+    currentPage > 1
+      ? `<li class="page-item"><a class="page-link page-prev" href="#">Trước</a></li>`
+      : ""
+  }
+  ${[...Array(totalPages).keys()]
+    .map(
+      (index) =>
+        `<li class="page-item ${
+          +currentPage === +index + 1 ? "active" : ""
+        }"><a class="page-link page-number" href="#">${index + 1}</a></li>`
+    )
+    .join("")}
+  ${
+    currentPage < totalPages
+      ? `<li class="page-item"><a class="page-link page-next" href="#">Sau</a></li>`
+      : ""
+  }
+</ul>`;
+  }
+};
+
+const goPage = (page) => {
+  currentPage = page;
+  getPosts({
+    _sort: sort,
+    _order: order,
+    q: keyword,
+    _page: currentPage,
+    _limit: PAGE_LIMIT,
+  });
 };
 
 const getPosts = async (query = {}) => {
   const querySring = new URLSearchParams(query).toString();
-  const { data: posts } = await client.get("/posts?" + querySring);
+  // chuyển từ object => query string
+  // key1=value&key2=value2...
+  const { data: posts, response } = await client.get("/posts?" + querySring);
+  // Tính tổng số trang = tổng số bài / số bài trên 1 trang
+  const totalPosts = response.headers.get("x-total-count");
+  const totalPages = Math.ceil(totalPosts / PAGE_LIMIT);
   render(posts);
+  renderPaginate(totalPages);
 };
 
 let order = "desc";
 let sort = "id";
 let keyword = "";
+let currentPage = 1;
 
 getPosts({
   _sort: sort,
   _order: order,
+  _page: currentPage,
+  _limit: PAGE_LIMIT,
 });
+// Phân trang
+// tổng số trang = Tổng số bài viết / limit
 
-//Xay dung chuc nang tim kiem
+//Xây dựng chức năng tìm kiếm
 const searchForm = document.querySelector(".search");
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -125,11 +108,14 @@ searchForm.addEventListener("submit", (e) => {
     _sort: sort,
     _order: order,
     q: keyword,
+    _page: currentPage,
+    _limit: PAGE_LIMIT,
   });
+
   keywordEl.value = "";
 });
 
-// Sap xep
+// Xây dựng chức năng sắp xếp
 const sortByEl = document.querySelector(".sort-by");
 sortByEl.addEventListener("change", (e) => {
   order = e.target.value;
@@ -137,5 +123,26 @@ sortByEl.addEventListener("change", (e) => {
     _sort: sort,
     _order: order,
     q: keyword,
+    _page: currentPage,
+    _limit: PAGE_LIMIT,
   });
+});
+
+// Xử lý chuyển trang
+paginationNav.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains("page-number")) {
+    //Gọi hàm chuyển trang
+    goPage(+e.target.innerText);
+  }
+
+  //Prev
+  if (e.target.classList.contains("page-prev")) {
+    goPage(currentPage - 1);
+  }
+
+  //Next
+  if (e.target.classList.contains("page-next")) {
+    goPage(currentPage + 1);
+  }
 });
