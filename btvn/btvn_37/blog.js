@@ -1,5 +1,6 @@
 import { client } from "./client.js";
 import { requestRefresh } from "./token.js";
+import { getRefreshTokenFromLocalStorage } from "./token.js";
 client.setUrl("https://api-auth-two.vercel.app");
 let currentPage = 1;
 let isFetching = false;
@@ -48,21 +49,20 @@ const fetchData = async function () {
     }
     currentPage++;
     hideLoading();
-    window.addEventListener("scroll", () => {
-      if (isFetching || !hasMore) {
-        return;
-      }
-      if (
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - 100
-      ) {
-        fetchData();
-      }
-    });
   } catch {
     return;
   }
 };
+
+window.addEventListener("scroll", () => {
+  if (isFetching || !hasMore) {
+    return;
+  }
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+    fetchData();
+  }
+});
+
 const renderDefault = () => {
   root.innerHTML = `<h1>Blogger</h1><button type="submit" class="btn btn-primary">Đăng nhập</button>
       <div class="block-list"></div>`;
@@ -133,6 +133,7 @@ const renderLogin = () => {
           type="email"
           class="form-control email"
           placeholder="Email..."
+          value="vanducnguyen2108@gmail.com"
         />
       </div>
       <div class="mb-3">
@@ -141,6 +142,7 @@ const renderLogin = () => {
           type="password"
           class="form-control password"
           placeholder="Mật khẩu..."
+          value="Nguyenduc123"
         />
       </div>
       <div class="d-grid">
@@ -343,12 +345,27 @@ const app = {
   handlePost: async function (data, msg) {
     msg.innerText = "";
     app.addLoadingPost();
-    const { data: tokens, response } = await client.post("/blogs", data);
-    app.removeLoadingPost();
-    if (!response.ok) {
-      msg.innerText = `${tokens.message}`;
-    } else {
-      this.render();
+    try {
+      const { data: tokens, response } = await client.post("/blogs", data);
+      app.removeLoadingPost();
+      if (!response.ok) {
+        if (response.status === 401) {
+          const refreshToken = getRefreshTokenFromLocalStorage();
+          const newTokens = await requestRefresh(refreshToken);
+          if (newTokens) {
+            localStorage.setItem("login_tokens", JSON.stringify(newTokens));
+            this.handlePost(data, msg);
+          } else {
+            this.handleLogout();
+          }
+        } else {
+          msg.innerText = `${tokens.message}`;
+        }
+      } else {
+        this.render();
+      }
+    } catch (error) {
+      console.error(error);
     }
   },
   eventPost: function () {

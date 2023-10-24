@@ -8,3 +8,11 @@ export const requestRefresh = async function (refreshToken) {
     return data;
   }
 };
+export const getRefreshTokenFromLocalStorage = () => {
+  const tokens = localStorage.getItem("login_tokens");
+  if (tokens) {
+    const parsedTokens = JSON.parse(tokens);
+    return parsedTokens.refreshToken;
+  }
+  return null;
+};
