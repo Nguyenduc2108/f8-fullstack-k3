@@ -423,4 +423,42 @@ const getRelativeTime = (date) => {
   }
 };
 
+const processLinks = (text) => {
+  // Xử lý số điện thoại
+  text = text.replace(/(0|\+84)\d{9}/g, '<a href="tel:$1">$1</a>');
+
+  // Xử lý email
+  text = text.replace(
+    /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})/g,
+    '<a href="mailto:$1">$1</a>'
+  );
+
+  // Xử lý video YouTube
+  text = text.replace(
+    /https:\/\/www\.youtube\.com\/watch\?v=([A-Za-z0-9_-]+)/g,
+    '<iframe width="560" height="315" src="https://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>'
+  );
+
+  // Xử lý các liên kết thông thường
+  text = text.replace(
+    /(https?:\/\/[^\s]+)/g,
+    '<a href="$1" target="_blank">$1</a>'
+  );
+
+  return text;
+};
+
+const processSpacesAndLineBreaks = (text) => {
+  // Xử lý dấu cách:
+  text = text.replace(/\s+/g, " ");
+
+  // Xử lý dấu xuống dòng:
+  text = text.replace(/(\r\n|\r|\n){2,}/g, "\n");
+
+  return text;
+};
+div.innerHTML = processSpacesAndLineBreaks(
+  processLinks(stripHtml(post.content))
+);
+
 app.render();
