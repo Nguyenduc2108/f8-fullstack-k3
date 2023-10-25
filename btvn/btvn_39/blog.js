@@ -353,6 +353,15 @@ const app = {
           msg.innerText =
             "Ngày đã qua. Vui lòng chọn một ngày trong tương lai.";
           app.removeLoadingPost();
+          return;
+        } else if (inputDate.getTime() === now.getTime()) {
+          this.handlePost(data, msg);
+        } else {
+          const timeDifference = inputDate - now;
+          const hoursDifference = Math.ceil(timeDifference / (1000 * 60 * 60));
+
+          const scheduleMessage = `Bài viết sẽ được đăng sau ${hoursDifference} giờ.`;
+          const confirm = window.confirm(scheduleMessage);
         }
       }
 
