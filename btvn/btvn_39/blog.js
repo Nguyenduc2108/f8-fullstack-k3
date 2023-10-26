@@ -457,8 +457,5 @@ const processSpacesAndLineBreaks = (text) => {
 
   return text;
 };
-div.innerHTML = processSpacesAndLineBreaks(
-  processLinks(stripHtml(post.content))
-);
 
 app.render();
