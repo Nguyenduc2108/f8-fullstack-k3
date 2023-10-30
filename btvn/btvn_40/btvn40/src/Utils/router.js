@@ -1,7 +1,7 @@
 import Navigo from "navigo";
 import { Error } from "../Error";
 
-const Router = new Navigo("/f8-fullstack-k3/btvn/btvn_40/btvn40/dist", {
+const Router = new Navigo("/", {
   linksSelector: "a",
 });
 const app = document.querySelector("#app");
