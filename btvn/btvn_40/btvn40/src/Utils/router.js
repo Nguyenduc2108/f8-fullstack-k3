@@ -1,0 +1,22 @@
+import Navigo from "navigo";
+import { Error } from "../Error";
+
+const Router = new Navigo("/", { linksSelector: "a" });
+const app = document.querySelector("#app");
+window.navigate = (data) => Router.navigate(data);
+
+export const router = (pathList = [], DefaultLayout) => {
+  pathList.forEach(function ({ path, component }) {
+    Router.on("/", (data) => {
+      app.innerHTML = DefaultLayout
+        ? DefaultLayout(component(data))
+        : component(data);
+    });
+  });
+
+  Router.notFound(() => {
+    document.body.innerHTML = Error();
+  });
+
+  Router.resolve();
+};
