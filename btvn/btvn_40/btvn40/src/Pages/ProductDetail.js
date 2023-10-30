@@ -3,6 +3,6 @@ export const ProductDetail = ({ data }) => {
 
   return `
   <h1>Chi tiết sản phẩm: ${id}</h1>
-  <button onclick= "navigate('/san-pham')" >Back</button>
+  <button onclick= "window.navigate('/san-pham')" >Back</button>
   `;
 };

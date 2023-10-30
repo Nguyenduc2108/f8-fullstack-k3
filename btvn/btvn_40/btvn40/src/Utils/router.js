@@ -5,7 +5,7 @@ const Router = new Navigo("/", {
   linksSelector: "a",
 });
 const app = document.querySelector("#app");
-
+window.navigate = (data) => Router.navigate(data);
 export const router = (pathList = [], DefaultLayout) => {
   pathList.forEach(function ({ path, component }) {
     Router.on(path, (data) => {
