@@ -1,29 +1,46 @@
-import React from "react";
+import React, { Component } from "react";
+import Counter from "./components/Counter";
+import Login from "./components/Login";
 
-export const App = () => {
-  return (
-    <div className="content" id="content">
-      <h1 className="content">học react khong kho</h1>
-      <h2>hello</h2>
-      <ul className="menu">
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-        <li>item 4</li>
-        <li>item 5</li>
-        <li>item 6</li>
-        <li>item 7</li>
-        <li>item 8</li>
-        <li>item 9</li>
-        <li>item 10</li>
-      </ul>
-      <button
-        onClick={() => {
-          console.log("xin chao f8");
-        }}
-      >
-        click me
-      </button>
-    </div>
-  );
-};
+export class App extends Component {
+  constructor() {
+    super();
+    this.state = { isShow: false, todo: [] };
+  }
+  getTodo = async () => {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+    const data = await response.json();
+    this.setState({ todo: data });
+  };
+  componentDidMount() {
+    this.getTodo();
+  }
+
+  render() {
+    const { todo } = this.state;
+
+    return (
+      <div>
+        <Login />
+        {/* { {this.isShow && <Counter />}
+        <button
+          onClick={() => {
+            this.setState({ isShow: !this.state.isShow });
+          }}
+        >
+          Toogle
+        </button>
+        {todo.map(({ id, title }) => {
+          <h3 key={id}>{title}</h3>;
+        })}
+      } */}
+      </div>
+    );
+  }
+}
+
+export default App;
+
+/*
+Call API -> Render Ui
+*/
