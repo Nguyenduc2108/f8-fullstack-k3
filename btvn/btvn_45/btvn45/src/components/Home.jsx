@@ -8,7 +8,7 @@ const CONGRATULATIONS_MESSAGE = "Congratulations! You guessed it right!";
 const TOO_HIGH_MESSAGE = "Too high, guess again";
 const TOO_LOW_MESSAGE = "Too low, guess again";
 
-const NumberGameFeatures = () => {
+const Home = () => {
   const [guess, setGuess] = useState("");
   const [range, setRange] = useState(10);
   const [attempts, setAttempts] = useState(3);
@@ -103,10 +103,10 @@ const NumberGameFeatures = () => {
     setSelectedRange(newRange);
     setCurrentRange(newRange);
     const ratio = newRange / 1000;
-    const sliderticks = e.target.parentElement.querySelector(".sliderticks");
+    const slider = e.target.parentElement.querySelector(".slider");
     const newSliderValue = ratio * e.target.value;
-    if (sliderticks) {
-      sliderticks.style.left = `${newSliderValue}px`;
+    if (slider) {
+      slider.style.left = `${newSliderValue}px`;
     }
 
     if (inputRef.current) {
@@ -149,13 +149,11 @@ const NumberGameFeatures = () => {
                   min="0"
                   max="2048"
                   step="1"
-                  id="range"
-                  list="tickmarks"
                   onChange={handleRangeChange}
                 />
                 {selectedRange}
               </label>
-              <div className="sliderticks">
+              <div className="slider">
                 <span>0</span>
                 <span>100</span>
                 <span>512</span>
@@ -169,14 +167,13 @@ const NumberGameFeatures = () => {
         <br />
         {canAnswer && (
           <div>
-            <h3 className="inputNumber">Hãy Thử Nhập 1 Số</h3>
+            <h3>Hãy Thử Nhập 1 Số</h3>
             <input
               value={guess}
               type="number"
               onChange={handleInputChange}
               onKeyDown={handleArrowKeyPress}
               onKeyPress={handleEnterKeyPress}
-              className="fomrNumberInput"
               ref={inputRef}
             />
           </div>
@@ -186,4 +183,4 @@ const NumberGameFeatures = () => {
   );
 };
 
-export default NumberGameFeatures;
+export default Home;
