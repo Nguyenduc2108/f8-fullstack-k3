@@ -34,3 +34,5 @@ export default App;
 
 //ACtion Creator
 //Hàm trả về action(object)
+
+//Component -> Dispatch -> Middlewares -> reducer -> update state -> component
