@@ -8,7 +8,6 @@ import showToast from "../Toastify";
 import ReactPaginate from "react-paginate";
 
 export default function Product({ products, pageCount, handlePageClick }) {
-  console.log(products.listProduct);
   const dispatch = useDispatch();
 
   const handleAddToCart = (product) => {
