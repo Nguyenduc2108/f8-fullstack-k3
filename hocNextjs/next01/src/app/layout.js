@@ -1,4 +1,4 @@
-import Navigation from "@/components/Navigation";
+// import Navigation from "@/components/Navigation";
 
 export const metadata = {
   title: "F8 - học lap trinh ",
