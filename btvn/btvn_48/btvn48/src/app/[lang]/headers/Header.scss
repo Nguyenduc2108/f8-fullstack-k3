@@ -1,0 +1,41 @@
+.container-header {
+  backdrop-filter: blur(16px);
+  background-color: inherit;
+  position: sticky;
+  inset: 0;
+  max-height: fit-content;
+  z-index: 40;
+  .main-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        &:last-child {
+          color: rgb(34 197 94);
+          &:hover {
+            color: rgb(99, 243, 152);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .contact-mode {
+      .contact {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
